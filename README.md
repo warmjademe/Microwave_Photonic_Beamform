@@ -24,6 +24,8 @@ python3 source_codes/release_tools/fetch_artifacts.py --verify-only
 
 下载工具需要 Python 3.9 或更新版本，使用标准库。它先检查附件 SHA-256，再解压和逐文件核对；不会运行训练或仿真。各附件的范围、大小与校验值见 [RELEASE_DATA.json](dataset_simulation/RELEASE_DATA.json)。
 
+为支持中断后的续传，Release 将每个大附件拆为至多 64 MiB 的分片。下载工具自动逐片校验并合并，再检查完整压缩包的原始 SHA-256；分片不改变数据内容。
+
 ## 输入、监督与输出
 
 - 一个环境的输入 `X` 为 `17 × 2513`，包括 16 组探测下的复导频观测、载频和允许的接收统计量。

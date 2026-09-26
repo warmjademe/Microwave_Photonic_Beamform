@@ -202,7 +202,7 @@
     "source_codes/baseline_codebook/method.py": "5ffa1f92408ce77c33a2ee05cab9c0bbe14d7a1fd309aac83571cd26e0e3b381",
     "source_codes/baseline_rescnn/README.md": "3f89af453f39b1665fd5eb7114b6e1d6e1bf09283e0256a756dec81eb55fb1c8",
     "source_codes/baseline_rescnn/method.py": "9a60249ac6349f9c472af544146386cf5966af5a92b1b0d837c6bccec6086e8d",
-    "source_codes/release_tools/fetch_artifacts.py": "9562da68ebbafc0209b4c4d07db64e471a7697ddda696d8f22c34fac1d08b957",
+    "source_codes/release_tools/fetch_artifacts.py": "72d32daa26c1d164fc208babf61a71b54bef04e250e1c45af69e30905c1a22b0",
     "source_codes/diagnostics/carrier_reference.py": "cbbf579b658aa61ad06db6b1e40ca24fabba45f17c97e24ab47258f53137a653",
     "source_codes/diagnostics/staged_clock.py": "6058b455e72db5e648e86ca0a53f95af587898c73bb85f00a2c98c6f4489fe16",
     "source_codes/diagnostics/round01.py": "e90abea6c231ac69b35e3d6c0892d44e20b5a35880e6b5c096457c48623a1f99",

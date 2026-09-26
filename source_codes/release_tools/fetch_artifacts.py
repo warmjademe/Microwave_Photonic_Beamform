@@ -71,6 +71,24 @@ def extract_data(bundle: tarfile.TarFile, root: Path) -> None:
             raise ValueError("附件包含不支持的特殊文件")
 
 
+def download_file(item: dict, cache: Path) -> Path:
+    """已通过校验的分片可以复用，中断后只重下未完成的分片。"""
+    path = cache / item["name"]
+    if path.is_file() and path.stat().st_size == item["bytes"] and sha256(path) == item["sha256"]:
+        return path
+    temporary = path.with_suffix(path.suffix + ".part")
+    request = urllib.request.Request(item["url"], headers={"User-Agent": "Microwave-Photonic-Beamform"})
+    digest = hashlib.sha256()
+    with urllib.request.urlopen(request, timeout=120) as response, temporary.open("wb") as out:
+        for block in iter(lambda: response.read(4 * 1024 * 1024), b""):
+            out.write(block)
+            digest.update(block)
+    if temporary.stat().st_size != item["bytes"] or digest.hexdigest() != item["sha256"]:
+        raise ValueError("下载校验失败，保留 .part 供诊断：" + item["name"])
+    temporary.replace(path)
+    return path
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
@@ -102,16 +120,20 @@ def main() -> None:
         cache.mkdir(exist_ok=True)
         archive = cache / item["name"]
         if not archive.exists() or sha256(archive) != item["sha256"]:
-            temporary = archive.with_suffix(archive.suffix + ".part")
-            request = urllib.request.Request(item["url"], headers={"User-Agent": "Microwave-Photonic-Beamform"})
-            digest = hashlib.sha256()
-            with urllib.request.urlopen(request, timeout=120) as response, temporary.open("wb") as out:
-                for block in iter(lambda: response.read(4 * 1024 * 1024), b""):
-                    out.write(block)
-                    digest.update(block)
-            if temporary.stat().st_size != item["bytes"] or digest.hexdigest() != item["sha256"]:
-                raise ValueError("附件校验失败，保留 .part 供诊断：" + item["name"])
-            temporary.replace(archive)
+            if item.get("parts"):
+                pieces = [download_file(part, cache) for part in item["parts"]]
+                temporary = archive.with_suffix(archive.suffix + ".joining")
+                with temporary.open("wb") as out:
+                    for piece in pieces:
+                        with piece.open("rb") as stream:
+                            shutil.copyfileobj(stream, out, length=4 * 1024 * 1024)
+                if temporary.stat().st_size != item["bytes"] or sha256(temporary) != item["sha256"]:
+                    raise ValueError("分片合并后的附件校验失败")
+                temporary.replace(archive)
+                for piece in pieces:
+                    piece.unlink()
+            else:
+                download_file(item, cache)
         if args.extract:
             with tarfile.open(archive, "r:gz") as bundle:
                 extract_data(bundle, root)
