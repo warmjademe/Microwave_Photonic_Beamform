@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>微波光子控制 · 实验结果</title><link rel="stylesheet" href="app.css"><script defer src="app.js"></script></head>
+<body><header><div class="wrap"><div class="eyebrow">8 × 8 面阵 / 4—20 GHz / 监督学习</div><h1>微波光子控制实验</h1>
+<p class="lead">同一传播环境，同一接收器。比较不同方法怎样设置64路延时与光衰减，以及信号最终收得怎么样。</p>
+<div id="scope" class="notice">正在读取已核验结果…</div><div class="stats" id="stats"></div>
+<nav><a href="#quality">质量比较</a><a href="#conditions">频率与传播</a><a href="#scale">数据规模</a><a href="#components">两阶段消融</a><a href="#comparisons">差异与区间</a><a href="#timing">控制耗时</a><a href="#signals">一条信号</a></nav></div></header>
+<main class="wrap"><section id="quality"><div class="section-head"><div><div class="eyebrow">01 / 同条件比较</div><h2>哪个方法收得更好？</h2></div><a href="results.csv" class="download">下载完整数值 CSV ↗</a></div>
+<p>先选择相同的测量预算与训练规模，再比较质量。误码率表示收到的比特有多少出错；EVM表示接收符号偏离发送符号的程度。</p>
+<div class="toolbar"><label>测量预算<select id="budget"><option value="16">16次共同测量</option><option value="64">64次反馈测量</option><option value="0">固定设置，无测量</option><option value="reference">额外信息 / 不同硬件参考</option><option value="all">全部（预算不同，分别解读）</option></select></label><label>训练环境数量<select id="training-size"></select></label><label>排序指标<select id="metric"></select></label></div>
+<p id="metric-note" class="muted"></p><div id="quality-chart" class="chart"></div><p id="quality-count" class="muted"></p>
+<div class="table-scroll"><table><thead><tr><th>方法</th><th>训练环境</th><th>测量次数</th><th>BER % ↓</th><th>EVM % ↓</th><th>SER % ↓</th><th>块错误率 % ↓</th><th>输出SNR dB ↑</th></tr></thead><tbody id="quality-table"></tbody></table></div>
+<details><summary>实验完成状态与比较边界</summary><div id="phase-status" class="phase-grid"></div><ul id="notes"></ul><p id="timing-note"></p></details></section>
+<section id="conditions"><div class="eyebrow">02 / 看清适用条件</div><h2>频率和传播条件改变后，结果怎样变化？</h2>
+<div class="toolbar"><label>方法 A<select id="method-a"></select></label><label>方法 B<select id="method-b"></select></label><label>分组<select id="group"><option value="carrier_ghz">载频 GHz</option><option value="rays">多径条数</option><option value="max_delay_ns">最大路径时差 ns</option><option value="angular_std_deg">角度扩展 °</option><option value="power_bin">接收功率分层</option></select></label></div>
+<p class="muted">使用上方所选质量指标。这里是每个分组的全部测试环境平均结果；图例同时标明测量预算。</p><div id="condition-chart" class="chart"></div></section>
+<section id="scale"><div class="eyebrow">03 / 数据是否不够</div><h2>增加训练环境，是否比增加训练次数更有帮助？</h2>
+<p>固定40轮时，数据越多，参数更新次数也越多。“相同更新次数”对照把这项计算量固定，帮助观察更多传播环境本身的作用。</p><p id="exploration-link" class="notice" hidden></p><div id="scale-figures"></div></section>
+<section id="components"><div class="eyebrow">04 / 两个可替换阶段</div><h2>改善来自信号估计，还是器件控制？</h2>
+<div class="flow"><div><b>共同输入</b><span>16套公开导频测量</span></div><i>→</i><div><b>A：估计响应</b><span>传统协方差 / 复响应 CNN</span></div><i>→</i><div><b>B：计算设置</b><span>逐路延时与光衰减</span></div><i>→</i><div><b>独立数据接收</b><span>统计误码、失真与功率</span></div></div>
+<label>控制阶段的比较<select id="component-mode"><option value="multi">原两轮控制 → 多起点控制（都用16次测量）</option><option value="feedback">原两轮控制 → 反馈确认（16次 → 64次测量）</option></select></label>
+<p id="component-note" class="muted"></p><div id="component-grid" class="component-grid"></div><div id="component-figures"></div><div id="feedback-figures" hidden></div><div id="estimator-figures"></div></section>
+<section id="comparisons"><div class="eyebrow">05 / 配对比较</div><h2>改善有多大，结果有多确定？</h2>
+<p id="comparison-scope" class="notice"></p><p>差值按表中的加减关系计算。BER、SER和块错误率使用百分点；EVM使用百分点；输出SNR使用dB。95%区间跨过0时，这批环境还没有把该差异的方向区分清楚。</p>
+<div class="toolbar"><label>比较问题<select id="comparison-family"></select></label><label>指标<select id="comparison-metric"></select></label><a id="comparisons-download" class="download" hidden>下载比较 CSV ↗</a></div>
+<div id="comparison-empty" class="muted"></div><div class="table-scroll"><table><thead><tr><th>比较关系</th><th>差值</th><th>95%配对区间</th><th>环境胜 / 平 / 负</th><th>校正后 q 值</th></tr></thead><tbody id="comparison-table"></tbody></table></div>
+<p class="muted">区间按独立传播环境计算，同一环境的频率点一起保留。q值来自环境胜负的符号检验及族内BH校正，与平均差值的区间回答不同问题。固定seed0模型的环境变化不包含重新训练的随机性。</p></section>
+<section id="timing"><div class="eyebrow">06 / 实际运行成本</div><h2>算出一套器件设置，要多久？</h2><p id="timing-scope" class="notice"></p>
+<p>软件耗时包括输入处理、实际模型推理或响应估计、控制搜索；另列按测量和切换时长估算的总耗时。后者是模型估计，不是硬件实测。</p>
+<div class="table-scroll"><table><thead><tr><th>方法</th><th>测量次数</th><th>软件均值 ms</th><th>软件中位数 ms</th><th>软件P95 ms</th><th>估算总均值 ms</th></tr></thead><tbody id="timing-table"></tbody></table></div></section>
+<section id="signals"><div class="eyebrow">07 / 固定第0个测试环境</div><h2>跟着一条信号，看输入、控制和输出</h2>
+<p>固定使用同一环境，不按效果挑选案例。图显示预先固定的第1次噪声抽样；旁边的质量数字汇总全部8次抽样。</p>
+<div class="toolbar"><label>载频<select id="signal-frequency"></select></label><label>接收方法<select id="signal-method"></select></label><a id="controls-download" class="download">下载64路控制 CSV ↗</a></div>
+<p id="signal-scope" class="notice small"></p><div id="signal-quality" class="stats compact"></div>
+<div class="signal-grid"><article><h3>发射与均衡后的接收星座</h3><div id="constellation" class="chart"></div><p class="muted">黑色叉号：发送点；蓝色圆点：接收点。越接近，失真越小。</p></article><article><h3>发送基带 / 接收电流</h3><div id="waveform" class="chart"></div><p class="muted">上下图量纲不同；接收I/Q为均衡前波形。</p></article></div>
+<div class="signal-grid" id="control-maps"><article><h3>64路有效延时 <small>ps</small></h3><div id="delay-map" class="heatmap"></div><p class="muted">从0到1484.375 ps；每档19.53125 ps。</p></article><article><h3>64路可调光衰减 <small>dB</small></h3><div id="attenuation-map" class="heatmap"></div><p class="muted">从0到12 dB，每档0.5 dB；另含固定5 dB光损。</p></article></div>
+<p class="muted">控制值对应仿真器的有效延时和衰减档位；物理开关接线尚未核验。64路光信号先合成，再由一个光电探测器处理。</p></section>
+<footer><p>所有模型训练、仿真与数值核验在 huashuo 执行。本页只读取核验后的结果，不在线重新训练。</p><p id="updated"></p></footer></main></body></html>

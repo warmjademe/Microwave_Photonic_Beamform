@@ -1,0 +1,15 @@
+{
+  "command": [
+    "c++",
+    "-std=c++17",
+    "-O3",
+    "-ffp-contract=off",
+    "-fPIC",
+    "-dynamiclib",
+    "/Users/qyb/RESEARCH/wangluqiang_2026_paper_1/source_codes/native_sim/native_laser.cpp",
+    "-o",
+    "/Users/qyb/RESEARCH/wangluqiang_2026_paper_1/source_codes/native_sim/_build/Darwin-arm64-e9867d1f02b9c365.38115.tmp.so"
+  ],
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+  "source_sha256": "e9867d1f02b9c3650e91c7e7f9663d2ea28ff160258760cb35c17e8a4d5b9254"
+}

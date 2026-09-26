@@ -1,0 +1,22 @@
+{
+  "schema": "old216-warm-feedback-extension-v1",
+  "scope": "Old216 exploratory extension selected after training diagnostic; new sealed864 not used",
+  "primary_metric": "ber",
+  "metrics": ["ber", "ser", "block_error_rate", "rms_evm_percent", "paired_output_snr_db"],
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20260926,
+  "stratified": false,
+  "multiplicity": "One BH-FDR family for all 50 extension tests; separate from the frozen original 52-comparison analysis",
+  "comparisons": [
+    {"id": "warm_cnn_vs_codebook", "family": "warm_extension", "terms": {"cnn_warm64": 1, "codebook": -1}, "meaning": "Same64 total measurements; CNN proposal plus geometric search versus original codebook"},
+    {"id": "warm_cnn_vs_coordinate", "family": "warm_extension", "terms": {"cnn_warm64": 1, "coordinate": -1}, "meaning": "Same64 total measurements; compare against coordinate feedback"},
+    {"id": "warm_cnn_vs_spsa", "family": "warm_extension", "terms": {"cnn_warm64": 1, "spsa": -1}, "meaning": "Same64 total measurements; compare against SPSA feedback"},
+    {"id": "warm_cnn_vs_done", "family": "warm_extension", "terms": {"cnn_warm64": 1, "done": -1}, "meaning": "Same64 total measurements; compare against DONE feedback"},
+    {"id": "warm_cnn_vs_de", "family": "warm_extension", "terms": {"cnn_warm64": 1, "de": -1}, "meaning": "Same64 total measurements; compare against differential evolution feedback"},
+    {"id": "warm_cnn_vs_covariance", "family": "warm_extension", "terms": {"cnn_warm64": 1, "covariance_warm64": -1}, "meaning": "Same64 measurements and same proposal/search procedure; change response estimator"},
+    {"id": "warm_covariance_vs_codebook", "family": "warm_extension", "terms": {"covariance_warm64": 1, "codebook": -1}, "meaning": "Same64 measurements; benefit of a traditional response-based proposal"},
+    {"id": "warm_cnn_vs_base16", "family": "warm_extension", "terms": {"cnn_warm64": 1, "complex_response_cnn": -1}, "meaning": "64 versus16 measurements; improvement includes48 additional feedback observations"},
+    {"id": "warm_covariance_vs_base16", "family": "warm_extension", "terms": {"covariance_warm64": 1, "covariance_response": -1}, "meaning": "64 versus16 measurements; improvement includes48 additional feedback observations"},
+    {"id": "estimator_feedback_interaction", "family": "warm_extension", "terms": {"cnn_warm64": 1, "covariance_warm64": -1, "complex_response_cnn": -1, "covariance_response": 1}, "meaning": "Difference of CNN-minus-covariance gaps across64 and16 measurements; feedback stage and information budget change together"}
+  ]
+}

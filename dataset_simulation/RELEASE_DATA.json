@@ -1,0 +1,88 @@
+{
+  "schema": "mwp-public-release-v1",
+  "repository": "https://github.com/warmjademe/Microwave_Photonic_Beamform",
+  "release_tag": "data-2026-09-26",
+  "source": "frozen experiment files synchronized from huashuo",
+  "partitions": {
+    "train": 3456,
+    "validation": 216,
+    "test": 864
+  },
+  "carriers_ghz": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "final_identity_sha256": "87976ae8283731c6878d3b46eb5faea361884176f3036e707dfdab518ffcc866",
+  "assets": [
+    {
+      "group": "train_validation",
+      "name": "mwp-train_validation-data-2026-09-26.tar.gz",
+      "bytes": 629472655,
+      "sha256": "1a11dd73027c814f349a80a821c9eb4382d48a9fc3f3dce45644cab206c682e8",
+      "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-09-26/mwp-train_validation-data-2026-09-26.tar.gz",
+      "members": 21071,
+      "uncompressed_member_bytes": 1158026125,
+      "file_index": "dataset_simulation/release_indices/train_validation.files.json.gz",
+      "file_index_sha256": "6cd7476e13efb2b2a285bbe724ffff275f071043215d11712638ce0d0d83eada"
+    },
+    {
+      "group": "supervision",
+      "name": "mwp-supervision-data-2026-09-26.tar.gz",
+      "bytes": 1755409379,
+      "sha256": "854179ecc07fca7f78deafc1a8ab9b20ca31508c2cd4fc4299ddc307507b23df",
+      "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-09-26/mwp-supervision-data-2026-09-26.tar.gz",
+      "members": 13860,
+      "uncompressed_member_bytes": 2791804757,
+      "file_index": "dataset_simulation/release_indices/supervision.files.json.gz",
+      "file_index_sha256": "edaa00422a3005cc30dec85bd167494887e9df74d83eb1d0dd51ed259297b2cf"
+    },
+    {
+      "group": "models",
+      "name": "mwp-models-data-2026-09-26.tar.gz",
+      "bytes": 593833365,
+      "sha256": "113ee7987a1c5929f12b85b8bad0eea89bd48404402bae583e26d214673a60e8",
+      "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-09-26/mwp-models-data-2026-09-26.tar.gz",
+      "members": 519,
+      "uncompressed_member_bytes": 1239384429,
+      "file_index": "dataset_simulation/release_indices/models.files.json.gz",
+      "file_index_sha256": "b63d55a29acc948c9526ce37ece5c7ea3846dee657cb9fcf6d28761161bf6b23"
+    },
+    {
+      "group": "final_test",
+      "name": "mwp-final_test-data-2026-09-26.tar.gz",
+      "bytes": 569523056,
+      "sha256": "df4f03e54d0afe87a7fbef6414a0958991c14f1136cb5af2d5ac4e2d270c7a2c",
+      "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-09-26/mwp-final_test-data-2026-09-26.tar.gz",
+      "members": 31252,
+      "uncompressed_member_bytes": 633896919,
+      "file_index": "dataset_simulation/release_indices/final_test.files.json.gz",
+      "file_index_sha256": "8e425990b79c838e1905a079a59fd19fd263bd874030ec72f2eca8816a5bfae7"
+    },
+    {
+      "group": "evidence",
+      "name": "mwp-evidence-data-2026-09-26.tar.gz",
+      "bytes": 231508464,
+      "sha256": "efa8bf8de1fcd1036b30649bbcd153c1f76456eb9dc80b954568699f93674444",
+      "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-09-26/mwp-evidence-data-2026-09-26.tar.gz",
+      "members": 27008,
+      "uncompressed_member_bytes": 272766102,
+      "file_index": "dataset_simulation/release_indices/evidence.files.json.gz",
+      "file_index_sha256": "1fb4abc8f0af96451b8575c999f1612da3d8e164a63285a73fe9687cf1afa6b2"
+    }
+  ]
+}

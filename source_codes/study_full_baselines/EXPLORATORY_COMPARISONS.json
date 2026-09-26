@@ -1,0 +1,488 @@
+{
+  "schema": "old216-exploratory-comparisons-v1",
+  "scope": "Exploratory old216 only; not final sealed confirmation plan",
+  "primary_metric": "ber",
+  "metrics": [
+    "ber",
+    "ser",
+    "block_error_rate",
+    "rms_evm_percent",
+    "paired_output_snr_db"
+  ],
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20260926,
+  "stratified": false,
+  "multiplicity": "BH-FDR within each RQ family across all listed comparable metrics; all plans retained",
+  "comparisons": [
+    {
+      "id": "core_vs_ttd_das",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "ttd_das": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_mlp",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "mlp": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_dnn",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "dnn": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_cnn",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "cnn": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_rescnn",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "rescnn": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_transformer",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "transformer": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_complex_cnn",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "complex_cnn": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_jct",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "jct": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_ridge_response",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "ridge_response": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_covariance_response",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "covariance_response": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_global_prior",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "global_prior": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_frequency_prior",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "frequency_prior": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_quality_absolute_single",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "quality_absolute_single": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_quality_absolute_robust",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "quality_absolute_robust": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_quality_candidate_ce_robust",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "quality_candidate_ce_robust": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_quality_candidate_soft_single",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "quality_candidate_soft_single": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_quality_candidate_soft_robust",
+      "family": "RQ1_public_input",
+      "terms": {
+        "complex_response_cnn": 1,
+        "quality_candidate_soft_robust": -1
+      },
+      "meaning": "Current response CNN plus base controller minus comparator; actual probes separately reported"
+    },
+    {
+      "id": "core_vs_codebook",
+      "family": "RQ1_feedback64",
+      "terms": {
+        "complex_response_cnn": 1,
+        "codebook": -1
+      },
+      "meaning": "16 public measurements versus total64 feedback; not equal-information comparison"
+    },
+    {
+      "id": "core_vs_coordinate",
+      "family": "RQ1_feedback64",
+      "terms": {
+        "complex_response_cnn": 1,
+        "coordinate": -1
+      },
+      "meaning": "16 public measurements versus total64 feedback; not equal-information comparison"
+    },
+    {
+      "id": "core_vs_spsa",
+      "family": "RQ1_feedback64",
+      "terms": {
+        "complex_response_cnn": 1,
+        "spsa": -1
+      },
+      "meaning": "16 public measurements versus total64 feedback; not equal-information comparison"
+    },
+    {
+      "id": "core_vs_done",
+      "family": "RQ1_feedback64",
+      "terms": {
+        "complex_response_cnn": 1,
+        "done": -1
+      },
+      "meaning": "16 public measurements versus total64 feedback; not equal-information comparison"
+    },
+    {
+      "id": "core_vs_de",
+      "family": "RQ1_feedback64",
+      "terms": {
+        "complex_response_cnn": 1,
+        "de": -1
+      },
+      "meaning": "16 public measurements versus total64 feedback; not equal-information comparison"
+    },
+    {
+      "id": "core_vs_teacher",
+      "family": "RQ1_privileged_reference",
+      "terms": {
+        "complex_response_cnn": 1,
+        "teacher": -1
+      },
+      "meaning": "Privileged reference; MRC has different digital receiver and no photonic output SNR"
+    },
+    {
+      "id": "core_vs_mrc",
+      "family": "RQ1_privileged_reference",
+      "terms": {
+        "complex_response_cnn": 1,
+        "mrc": -1
+      },
+      "meaning": "Privileged reference; MRC has different digital receiver and no photonic output SNR"
+    },
+    {
+      "id": "estimation_vs_per_tone_relative",
+      "family": "RQ2_estimator",
+      "terms": {
+        "complex_response_cnn": 1,
+        "per_tone_relative": -1
+      },
+      "meaning": "Same base controller; input/target common, capacities and representations reported separately"
+    },
+    {
+      "id": "estimation_vs_joint_relative",
+      "family": "RQ2_estimator",
+      "terms": {
+        "complex_response_cnn": 1,
+        "joint_relative": -1
+      },
+      "meaning": "Same base controller; input/target common, capacities and representations reported separately"
+    },
+    {
+      "id": "estimation_vs_joint_absolute",
+      "family": "RQ2_estimator",
+      "terms": {
+        "complex_response_cnn": 1,
+        "joint_absolute": -1
+      },
+      "meaning": "Same base controller; input/target common, capacities and representations reported separately"
+    },
+    {
+      "id": "estimation_vs_real_response_cnn",
+      "family": "RQ2_estimator",
+      "terms": {
+        "complex_response_cnn": 1,
+        "real_response_cnn": -1
+      },
+      "meaning": "Same base controller; input/target common, capacities and representations reported separately"
+    },
+    {
+      "id": "cnn__multi_mmse_minus_complex_response_cnn",
+      "family": "RQ2_controller",
+      "terms": {
+        "cnn__multi_mmse": 1,
+        "complex_response_cnn": -1
+      },
+      "meaning": "Controller contrast; scanning and measurement budgets explicitly distinguished"
+    },
+    {
+      "id": "cnn__single_10sweeps_minus_complex_response_cnn",
+      "family": "RQ2_controller",
+      "terms": {
+        "cnn__single_10sweeps": 1,
+        "complex_response_cnn": -1
+      },
+      "meaning": "Controller contrast; scanning and measurement budgets explicitly distinguished"
+    },
+    {
+      "id": "cnn__multi_mmse_minus_cnn__single_10sweeps",
+      "family": "RQ2_controller",
+      "terms": {
+        "cnn__multi_mmse": 1,
+        "cnn__single_10sweeps": -1
+      },
+      "meaning": "Controller contrast; scanning and measurement budgets explicitly distinguished"
+    },
+    {
+      "id": "covariance__multi_mmse_minus_covariance_response",
+      "family": "RQ2_controller",
+      "terms": {
+        "covariance__multi_mmse": 1,
+        "covariance_response": -1
+      },
+      "meaning": "Controller contrast; scanning and measurement budgets explicitly distinguished"
+    },
+    {
+      "id": "covariance__single_10sweeps_minus_covariance_response",
+      "family": "RQ2_controller",
+      "terms": {
+        "covariance__single_10sweeps": 1,
+        "covariance_response": -1
+      },
+      "meaning": "Controller contrast; scanning and measurement budgets explicitly distinguished"
+    },
+    {
+      "id": "covariance__multi_mmse_minus_covariance__single_10sweeps",
+      "family": "RQ2_controller",
+      "terms": {
+        "covariance__multi_mmse": 1,
+        "covariance__single_10sweeps": -1
+      },
+      "meaning": "Controller contrast; scanning and measurement budgets explicitly distinguished"
+    },
+    {
+      "id": "real_response_cnn__multi_mmse_minus_real_response_cnn",
+      "family": "RQ2_controller",
+      "terms": {
+        "real_response_cnn__multi_mmse": 1,
+        "real_response_cnn": -1
+      },
+      "meaning": "Controller contrast; scanning and measurement budgets explicitly distinguished"
+    },
+    {
+      "id": "two_stage_interaction",
+      "family": "RQ2_interaction",
+      "terms": {
+        "cnn__multi_mmse": 1,
+        "complex_response_cnn": -1,
+        "covariance__multi_mmse": -1,
+        "covariance_response": 1
+      },
+      "meaning": "Difference of controller effects with learned versus covariance response; negative favors synergy for error metrics"
+    },
+    {
+      "id": "scale_fixed_epochs_432_minus_216",
+      "family": "RQ3_fixed_epochs",
+      "terms": {
+        "response_n0432_fixed_epochs": 1,
+        "response_n0216_fixed_epochs": -1
+      },
+      "meaning": "Nested independent environments; same controller and old test, larger minus smaller"
+    },
+    {
+      "id": "scale_fixed_epochs_864_minus_432",
+      "family": "RQ3_fixed_epochs",
+      "terms": {
+        "complex_response_cnn": 1,
+        "response_n0432_fixed_epochs": -1
+      },
+      "meaning": "Nested independent environments; same controller and old test, larger minus smaller"
+    },
+    {
+      "id": "scale_fixed_epochs_1728_minus_864",
+      "family": "RQ3_fixed_epochs",
+      "terms": {
+        "response_n1728_fixed_epochs": 1,
+        "complex_response_cnn": -1
+      },
+      "meaning": "Nested independent environments; same controller and old test, larger minus smaller"
+    },
+    {
+      "id": "scale_fixed_epochs_3456_minus_1728",
+      "family": "RQ3_fixed_epochs",
+      "terms": {
+        "response_n3456_fixed_epochs": 1,
+        "response_n1728_fixed_epochs": -1
+      },
+      "meaning": "Nested independent environments; same controller and old test, larger minus smaller"
+    },
+    {
+      "id": "scale_fixed_epochs_216_vs_cov",
+      "family": "RQ3_fixed_epochs",
+      "terms": {
+        "response_n0216_fixed_epochs": 1,
+        "covariance_n0216": -1
+      },
+      "meaning": "Same training members at each scale; CNN minus covariance estimator"
+    },
+    {
+      "id": "scale_fixed_epochs_432_vs_cov",
+      "family": "RQ3_fixed_epochs",
+      "terms": {
+        "response_n0432_fixed_epochs": 1,
+        "covariance_n0432": -1
+      },
+      "meaning": "Same training members at each scale; CNN minus covariance estimator"
+    },
+    {
+      "id": "scale_fixed_epochs_1728_vs_cov",
+      "family": "RQ3_fixed_epochs",
+      "terms": {
+        "response_n1728_fixed_epochs": 1,
+        "covariance_n1728": -1
+      },
+      "meaning": "Same training members at each scale; CNN minus covariance estimator"
+    },
+    {
+      "id": "scale_fixed_epochs_3456_vs_cov",
+      "family": "RQ3_fixed_epochs",
+      "terms": {
+        "response_n3456_fixed_epochs": 1,
+        "covariance_n3456": -1
+      },
+      "meaning": "Same training members at each scale; CNN minus covariance estimator"
+    },
+    {
+      "id": "scale_equal_updates_432_minus_216",
+      "family": "RQ3_equal_updates",
+      "terms": {
+        "response_n0432_equal_updates": 1,
+        "response_n0216_equal_updates": -1
+      },
+      "meaning": "Nested independent environments; same controller and old test, larger minus smaller"
+    },
+    {
+      "id": "scale_equal_updates_864_minus_432",
+      "family": "RQ3_equal_updates",
+      "terms": {
+        "complex_response_cnn": 1,
+        "response_n0432_equal_updates": -1
+      },
+      "meaning": "Nested independent environments; same controller and old test, larger minus smaller"
+    },
+    {
+      "id": "scale_equal_updates_1728_minus_864",
+      "family": "RQ3_equal_updates",
+      "terms": {
+        "response_n1728_equal_updates": 1,
+        "complex_response_cnn": -1
+      },
+      "meaning": "Nested independent environments; same controller and old test, larger minus smaller"
+    },
+    {
+      "id": "scale_equal_updates_3456_minus_1728",
+      "family": "RQ3_equal_updates",
+      "terms": {
+        "response_n3456_equal_updates": 1,
+        "response_n1728_equal_updates": -1
+      },
+      "meaning": "Nested independent environments; same controller and old test, larger minus smaller"
+    },
+    {
+      "id": "scale_equal_updates_216_vs_cov",
+      "family": "RQ3_equal_updates",
+      "terms": {
+        "response_n0216_equal_updates": 1,
+        "covariance_n0216": -1
+      },
+      "meaning": "Same training members at each scale; CNN minus covariance estimator"
+    },
+    {
+      "id": "scale_equal_updates_432_vs_cov",
+      "family": "RQ3_equal_updates",
+      "terms": {
+        "response_n0432_equal_updates": 1,
+        "covariance_n0432": -1
+      },
+      "meaning": "Same training members at each scale; CNN minus covariance estimator"
+    },
+    {
+      "id": "scale_equal_updates_1728_vs_cov",
+      "family": "RQ3_equal_updates",
+      "terms": {
+        "response_n1728_equal_updates": 1,
+        "covariance_n1728": -1
+      },
+      "meaning": "Same training members at each scale; CNN minus covariance estimator"
+    },
+    {
+      "id": "scale_equal_updates_3456_vs_cov",
+      "family": "RQ3_equal_updates",
+      "terms": {
+        "response_n3456_equal_updates": 1,
+        "covariance_n3456": -1
+      },
+      "meaning": "Same training members at each scale; CNN minus covariance estimator"
+    }
+  ]
+}

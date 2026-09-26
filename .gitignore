@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv*/
+.downloads/
+*.npz
+*.npy
+*.pt
+*.so
+*.o
+*.tar.gz
+*.7z
+*.zip
+.env*

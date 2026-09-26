@@ -1,0 +1,15 @@
+{
+  "command": [
+    "c++",
+    "-std=c++17",
+    "-O3",
+    "-ffp-contract=off",
+    "-fPIC",
+    "-shared",
+    "/home/qyb/RESEARCH/wangluqiang_2026_paper_1/source_codes/native_sim/native_laser.cpp",
+    "-o",
+    "/home/qyb/RESEARCH/wangluqiang_2026_paper_1/source_codes/native_sim/_build/Linux-x86_64-e9867d1f02b9c365.872919.tmp.so"
+  ],
+  "compiler": "c++ (Ubuntu 15.2.0-4ubuntu4) 15.2.0",
+  "source_sha256": "e9867d1f02b9c3650e91c7e7f9663d2ea28ff160258760cb35c17e8a4d5b9254"
+}

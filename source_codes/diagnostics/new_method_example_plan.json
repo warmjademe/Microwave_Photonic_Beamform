@@ -1,0 +1,14 @@
+{
+  "created_date": "2026-09-25",
+  "purpose": "Illustrate actual trained controls and receiver flow after both independent evaluations complete",
+  "environment_selection": "test manifest index 0, fixed before new test results",
+  "carrier_ghz": [4, 12, 20],
+  "methods": ["public16", "candidate_soft_robust", "complex_response_cnn", "covariance_response", "feedback64"],
+  "frame": 5,
+  "apd_draws": 8,
+  "waveform_draw": 0,
+  "selection_depends_on_performance": false,
+  "quality_rank_audit_required": true,
+  "response_control_full_replay_required": true,
+  "limits": "One prespecified environment illustrates flow; grouped full-test results determine method conclusions. feedback64 uses 48 extra measurements."
+}

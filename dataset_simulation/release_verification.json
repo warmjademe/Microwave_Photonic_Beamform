@@ -1,0 +1,15 @@
+{
+  "checked_remote_files": 102381,
+  "frozen_sources_checked": 67,
+  "unique_files_hashed": 91112,
+  "mismatches": [],
+  "archive_restore": {
+    "groups": 5,
+    "checksums": "passed"
+  },
+  "huashuo_source_validation": {
+    "python_files_compiled": 221,
+    "frozen_final_protocol": "passed",
+    "training_or_inference_performed": false
+  }
+}
