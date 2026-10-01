@@ -1,30 +1,46 @@
-# 微波光子接收仿真与监督控制代码
+# Simulation, learning, and evaluation code
 
-当前版本对应 3,456 个训练环境、216 个验证环境和 864 个最终测试环境；每个环境覆盖 4–20 GHz 的 17 档载频。最终 864 环境的全部 21 项方法/配置已完成评价。数据与冻结结果见 [dataset_simulation](../dataset_simulation/README.md)。
+The code accompanies the dataset with 3,456 training, 216 validation, and 864 independent test environments, each evaluated at 17 carriers from 4 to 20 GHz. See the [paper-to-artifact guide](../dataset_simulation/PAPER_ARTIFACTS.md) for the raw records and model files associated with each research question.
 
-公开仓库：https://github.com/warmjademe/Microwave_Photonic_Beamform 。二进制数据、监督标签和模型通过同一仓库的 Release 下载，`release_tools/fetch_artifacts.py` 负责下载和文件完整性核对。
+## Entry points
 
-## 当前入口
-
-| 目录 | 作用 |
+| Module | Purpose |
 |---|---|
-| `native_sim/` | 固定器件参数、波形、离散控制和共同光电接收计算 |
-| `diagnostics/` | 当前版本仍依赖的数值修正与生成支撑模块 |
-| `dataset_protocol/` | 三组环境注册、来源校验及种子隔离 |
-| `baseline_*/` | 正式传统与深度学习基线，以及冻结包依赖的辅助模型 |
-| `our_method_response_control/` | 组件 A：复响应学习与共同控制求解器 |
-| `our_method_joint_refinement/` | 组件 B：联合测量校正 |
-| `our_method_measurement_refinement/` | 联合校正使用的训练残差统计 |
-| `study_final864/` | 最终清单、冻结、逐载频测试与统计分析 |
-| `study_full_baselines/` | 训练、验证、数据规模与超参数研究的共享实现 |
-| `results_site_3456/build_final.py` | 仅展示完整 864 环境结果的网站构建入口 |
+| `native_sim/` | Device parameters, waveform generation, discrete control, and common photodetection |
+| `diagnostics/` | Numerical support, calibration, and consistency audits |
+| `dataset_protocol/` | Split registry, provenance, and seed isolation |
+| `baseline_*/` | Nonlearning and supervised baselines, plus auxiliary models required by frozen bundles |
+| `our_method_response_control/` | Component A: complex response learning and shared control solving |
+| `our_method_joint_refinement/` | Component B: joint measurement correction |
+| `our_method_measurement_refinement/` | Training residual statistics used by correction |
+| `study_full_baselines/` | Training, validation, training-scale, and hyperparameter studies |
+| `study_final864/` | Base final-test execution and paired statistical analysis |
+| `study_uniform64/` | Eight additional baseline configurations and the combined 64-probe comparison |
+| `study_final_timing/` | Timing replay with control and feedback-trajectory verification |
+| `paper_results_20260927/` | Numerical tables, constellation reconstruction, and English paper figures |
+| `results_site_3456/build_final.py` | Dashboard built from complete final-test records |
+| `release_tools/fetch_artifacts.py` | Artifact download, extraction, and integrity verification |
 
-正式清单为 13 个基线、两个预算下的主方法、四个必要消融及教师/MRC 两个参考。详情见 [PROTOCOL.md](study_final864/PROTOCOL.md)。代码中的一些辅助结构属于冻结执行器依赖，不代表新增正式比较方法。
+The main comparison contains 13 baselines and the proposed method at 64 actual probes. The base and extended archives contain 29 configurations across budgets, ablations, and privileged references. [The base protocol](study_final864/PROTOCOL.md) and [the 64-probe extension protocol](study_uniform64/PROTOCOL.md) specify their relationship. Auxiliary code does not imply additional methods in the main ranking.
 
-当前输入为 2,513 维公开测量，最终执行输出为 64 个延时码和 64 个光衰减码。控制回归使用离线控制标签，响应学习使用等效复响应标签；两类方法共享训练环境与可观测信息。
+Each online input has 2,513 real values. Executed controls contain 64 integer delay codes and 64 integer attenuation codes. Control networks learn offline control labels; the response network learns per-branch complex responses. Both use the same observable inputs and training environments.
 
-## 执行与版本约束
+## Execution environment
 
-原始实验使用华硕 Linux、Python 3.11.16、PyTorch 2.8.0+cu128 和 NumPy 1.26.4。依赖见 `requirements-deep.txt`。本项目数值实验仍仅在华硕执行；Mac 用于编辑、同步、文件校验与论文处理。
+The experiments use Linux, Python 3.11.16, PyTorch 2.8.0+cu128, NumPy 1.26.4, and an NVIDIA RTX 4090. Python dependencies are listed in [requirements-deep.txt](requirements-deep.txt). Figure-generation modules also use Matplotlib and CairoSVG; Chinese figure variants require a CJK font. The native simulator requires a C++ compiler.
 
-已冻结的计算源码、参数和协议继续保留原字节及哈希。旧启动器、退出使用的原型与编译缓存从当前目录清理；必要历史材料另行压缩留档。更换运行环境时应显式适配原脚本的路径、主机检查及硬链接校验，不能直接把修改后的输出称为原冻结实验。
+Frozen runners preserve absolute paths, machine checks, source hashes, and hardlink relationships used in the original experiment. Downloading and inspecting the released arrays is portable. Executing the original training or evaluation runners on another machine requires explicit path/environment adaptation and consistency checks; changing a frozen source file also requires a new run identity. Original protocols and source snapshots are supplied for comparison.
+
+Model training uses one seed (0) and the final checkpoint after 40 epochs. Training-scale experiments additionally hold the optimizer update count fixed. The final-test set does not select checkpoints or component configurations.
+
+## Inspect artifacts without rerunning experiments
+
+From the repository root:
+
+```bash
+python3 source_codes/release_tools/fetch_artifacts.py --list
+python3 source_codes/release_tools/fetch_artifacts.py --extract
+python3 source_codes/release_tools/fetch_artifacts.py --verify-only
+```
+
+These commands use the Python standard library and do not train or simulate. The complete manifest includes both base datasets and paper supplements. Per-condition errors and powers, selected controls, model/checkpoint files, and constellation arrays remain available independently of the dashboard.

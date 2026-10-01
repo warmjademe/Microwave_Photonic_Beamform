@@ -8,18 +8,19 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 HERE=Path(__file__).resolve().parent
-PUBLIC={'baselines.html':'text/html; charset=utf-8','results-20260926.json':'application/json; charset=utf-8',
-        'results-20260926.csv':'text/csv; charset=utf-8','groups-20260926.csv':'text/csv; charset=utf-8',
-        'comparisons-20260926.csv':'text/csv; charset=utf-8'}
+PUBLIC={'baselines.html':'text/html; charset=utf-8','results-20261001.json':'application/json; charset=utf-8',
+        'results-20261001.csv':'text/csv; charset=utf-8','groups-20261001.csv':'text/csv; charset=utf-8',
+        'comparisons-20261001.csv':'text/csv; charset=utf-8'}
 RETIRED={'/legacy.html','/native-calibration.html','/baselines-20260924.html','/baselines-data.json',
          '/baselines-signals.json','/baselines-results.csv','/review-code.zip',
-         '/native-learning-update.html','/native-learning-update-2x.html'}
+         '/native-learning-update.html','/native-learning-update-2x.html',
+         '/results-20260926.json','/results-20260926.csv','/groups-20260926.csv','/comparisons-20260926.csv'}
 
 
 def main(port=4093):
     manifest=json.loads((HERE/'release.json').read_text())
-    if (manifest.get('schema')!='mwp-final864-only-release-v1' or manifest.get('evaluation_environments')!=864
-            or manifest.get('methods')!=21 or manifest.get('method_cases')!=308448
+    if (manifest.get('schema')!='mwp-final864-uniform64-release-v2' or manifest.get('evaluation_environments')!=864
+            or manifest.get('methods')!=29 or manifest.get('method_cases')!=425952
             or manifest.get('evaluation_split')!='test' or manifest.get('final_confirmation') is not True
             or manifest.get('historical_public_data') is not False):raise ValueError('非完整最终测试版本')
     assets={}
@@ -29,7 +30,7 @@ def main(port=4093):
         assets['/'+name]=(raw,gzip.compress(raw,mtime=0),mime,digest)
     for route in ['/','/index.html','/baselines']:assets[route]=assets['/baselines.html']
     health=json.dumps(dict(status='ok',application='mwp-device-audit',evaluation_split='test',
-        test_environments=864,methods=21,historical_public_data=False,
+        test_environments=864,methods=29,main_comparison_methods=14,historical_public_data=False,
         baselines_html_sha256=assets['/baselines.html'][3])).encode()
 
     class Handler(BaseHTTPRequestHandler):

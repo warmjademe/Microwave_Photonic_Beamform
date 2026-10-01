@@ -1,15 +1,38 @@
 {
-  "checked_remote_files": 102381,
-  "frozen_sources_checked": 67,
-  "unique_files_hashed": 91112,
-  "mismatches": [],
-  "archive_restore": {
-    "groups": 5,
-    "checksums": "passed"
+  "status": "passed",
+  "unique_data_files": 140980,
+  "remote_identity_matched_files": 140980,
+  "populations": {
+    "train": 3456,
+    "validation": 216,
+    "base_test_records": 14688,
+    "uniform64_records": 14688
   },
-  "huashuo_source_validation": {
-    "python_files_compiled": 221,
-    "frozen_final_protocol": "passed",
-    "training_or_inference_performed": false
-  }
+  "training_scale_models": 9,
+  "manuscript_main_table_rows_matched": 14,
+  "local_links_checked": 25,
+  "base_files_unchanged": 86755,
+  "restored_supplements": [
+    {
+      "group": "uniform64",
+      "files": 31255,
+      "archive_sha256": "f00612a4ac74b0d2da1b561e363b69af802dc7abc7a3c0f85db1ef086fe6c232",
+      "restore_and_file_hashes": "passed"
+    },
+    {
+      "group": "training_studies",
+      "files": 17044,
+      "archive_sha256": "9c8425d9e91419f3852c8132c4e03818bed844e757a0633691b4264977b976eb",
+      "restore_and_file_hashes": "passed"
+    },
+    {
+      "group": "paper_evidence",
+      "files": 5926,
+      "archive_sha256": "a5838b3b0e2fbc249e41fefd98c08f87c75198073ab1e1eecd1dab724c0b1cd9",
+      "restore_and_file_hashes": "passed"
+    }
+  ],
+  "credential_scan": "passed during packaging and source selection",
+  "manifest_sha256": "a727d6d778e9e58eb436c6262a3641d1332c4e20fbc8e7412dc0fdf3fc13de16",
+  "scope": "File integrity, archive restoration, dataset membership, and manuscript table correspondence; no new simulation or training"
 }

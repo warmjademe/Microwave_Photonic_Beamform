@@ -1,0 +1,48 @@
+<section class="panel" id="signals">
+<h2>同一输入，接收信号还原得怎样？</h2>
+<div class="controls"><label>测试案例<select id="signalCase"></select></label><label>对比基线<select id="signalMethod"></select></label></div>
+<p id="caseScope" class="notice"></p>
+<p class="note">星座显示8次配对噪声下的全部248个均衡后符号，橙色叉号是理想QPSK位置。折线显示第1次噪声抽样的31个I/Q符号值，属于均衡后符号序列，不是射频通带波形。左右星座使用相同坐标尺度。</p>
+<div class="grid"><div><h3 id="signalBaselineLabel"></h3><svg id="signalBaseline" viewBox="0 0 420 360" role="img" aria-label="基线接收星座"></svg></div><div><h3>本文方法</h3><svg id="signalOurs" viewBox="0 0 420 360" role="img" aria-label="本文方法接收星座"></svg></div></div>
+<p id="signalMetrics"></p><p id="signalIdentical" class="note"></p>
+<svg id="symbolWave" viewBox="0 0 1000 430" role="img" aria-label="发射与接收I和Q符号序列"></svg>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const sel=document.getElementById('signalCase'),methods=document.getElementById('signalMethod');
+ sel.innerHTML=D.examples.map((c,i)=>`<option value="${i}">${c.outcome_conditioned?'改善示例':'固定案例'} · ${c.carrier_ghz} GHz · ${esc(c.environment_id)}</option>`).join('');
+ sel.value='3';
+ methods.innerHTML=D.examples[0].methods.filter(r=>r.method!=='cnn_warm64').map(r=>`<option value="${r.method}">${esc(M[r.method].label)}</option>`).join('');
+ methods.value='initial_select64';
+ function plot(){
+  const c=D.examples[Number(sel.value)],a=c.methods.find(r=>r.method===methods.value),b=c.methods.find(r=>r.method==='cnn_warm64');
+  $('caseScope').textContent=c.scope+'。环境 '+c.environment_id+'，载频 '+c.carrier_ghz+' GHz。'+(c.outcome_conditioned?'该图用于解释改善机制；案例按结果筛选，不代表总体平均，整体比较以上方864环境的统计为准。':'该案例在查看效果前固定，可显示改善、相同或变差。');
+  $('signalBaselineLabel').textContent=M[a.method].label;
+  const flat=r=>r.received.flat(),limit=Math.max(1.1,...flat(a).flat().map(Math.abs),...flat(b).flat().map(Math.abs))*1.05;
+  function constellation(id,r){
+   const x=v=>210+v/limit*150,y=v=>175-v/limit*150;
+   let s='<rect x="60" y="25" width="300" height="300" fill="#f8fafc" stroke="#dbe3eb"/>';
+   s+='<line x1="60" y1="175" x2="360" y2="175" stroke="#bdcbd8"/><line x1="210" y1="25" x2="210" y2="325" stroke="#bdcbd8"/>';
+   for(const v of [-limit,0,limit])s+=`<text x="${x(v)}" y="344" text-anchor="middle">${v.toFixed(1)}</text><text x="52" y="${y(v)+4}" text-anchor="end">${v.toFixed(1)}</text>`;
+   s+='<text x="382" y="180">I</text><text x="205" y="17">Q</text>';
+   for(const p of flat(r))s+=`<circle cx="${x(p[0])}" cy="${y(p[1])}" r="2.6" fill="#2268af" opacity=".55"/>`;
+   for(const i of [-1,1])for(const q of [-1,1]){const xx=x(i/Math.sqrt(2)),yy=y(q/Math.sqrt(2));s+=`<path d="M${xx-5},${yy-5}L${xx+5},${yy+5}M${xx-5},${yy+5}L${xx+5},${yy-5}" stroke="#b86517" stroke-width="2.5"/>`;}
+   $(id).innerHTML=s;
+  }
+  constellation('signalBaseline',a);constellation('signalOurs',b);
+  $('signalMetrics').textContent='基线：BER '+fmt(a.ber)+'%，EVM '+fmt(a.rms_evm_percent,'rms_evm_percent')+'%；本文方法：BER '+fmt(b.ber)+'%，EVM '+fmt(b.rms_evm_percent,'rms_evm_percent')+'%。指标均由全部8次抽样计算。';
+  const equal=c.methods.filter(r=>JSON.stringify(r.received)===JSON.stringify(a.received));
+  $('signalIdentical').textContent=equal.length>1?'该基线与以下方法的最终I/Q相同，因此共用同一幅星座：'+equal.map(r=>M[r.method].label).join('、')+'。这是最终控制选择相同的结果，完整测试的平均成绩仍按各方法独立汇总。':'此案例中该基线的I/Q与其他方法不同。';
+  let svg='<text x="70" y="20">黑色虚线：发射符号　蓝色：基线　绿色：本文方法</text>';
+  for(let dim=0;dim<2;dim++){
+   const mid=112+dim*190,x=i=>70+i*870/30,y=v=>mid-v/limit*65;
+   svg+=`<text x="15" y="${mid}">${dim===0?'I':'Q'}</text>`;
+   for(const v of [-limit,0,limit])svg+=`<line x1="70" y1="${y(v)}" x2="940" y2="${y(v)}" stroke="#dbe3eb"/><text x="60" y="${y(v)+4}" text-anchor="end">${v.toFixed(1)}</text>`;
+   for(const [points,color,dash] of [[c.sent,'#14263b','5 4'],[a.received[0],'#2268af',''],[b.received[0],'#007d79','']])svg+=`<polyline points="${points.map((p,i)=>x(i)+','+y(p[dim])).join(' ')}" fill="none" stroke="${color}" stroke-width="1.7" stroke-dasharray="${dash}"/>`;
+   for(let i=0;i<31;i+=5)svg+=`<text x="${x(i)}" y="${mid+85}" text-anchor="middle">${i+1}</text>`;
+  }
+  svg+='<text x="480" y="418" text-anchor="middle">业务符号序号</text>';$('symbolWave').innerHTML=svg;
+ }
+ sel.addEventListener('change',plot);methods.addEventListener('change',plot);plot();
+});
+</script>

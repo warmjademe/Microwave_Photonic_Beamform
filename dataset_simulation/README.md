@@ -1,40 +1,38 @@
-# 当前仿真数据、监督标签与最终结果
+# Simulation data, supervision, and experimental records
 
-本目录对应冻结的微波光子接收研究版本。仅考虑期望信号的多径、衰减、衰落、天线噪声与光电检测噪声，不设置独立干扰源、温漂或额外随机器件失配。
+The dataset models a desired signal subject to multipath, attenuation, fading, antenna noise, and photodetection noise. It includes fixed insertion loss but no independent interferer, temperature drift, or additional random device mismatch. See the [paper-to-artifact guide](PAPER_ARTIFACTS.md) for the exact files supporting each research question.
 
-公开仓库：https://github.com/warmjademe/Microwave_Photonic_Beamform 。完整数据、监督标签、模型与逐载频结果见同一仓库的 [Release](https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/tag/data-2026-09-26)。
+## Independent splits
 
-## 三组独立环境
-
-| 当前角色 | 环境数 | 环境—载频记录数 | 数据位置 |
+| Role | Environments | Environment–carrier records | Input location |
 |---|---:|---:|---|
-| 训练 | 3,456 | 58,752 | `outputs/scaling_train_3456_20260925/train` |
-| 验证 | 216 | 3,672 | `outputs/quality_rank_hybrid_20260925/test` |
-| 最终测试 | 864 | 14,688 | `baseline_results/20260926_final864_selected/records` |
+| Training | 3,456 | 58,752 | `outputs/scaling_train_3456_20260925/train/` |
+| Validation | 216 | 3,672 | `outputs/quality_rank_hybrid_20260925/test/` |
+| Final test | 864 | 14,688 | `baseline_results/20260926_final864_selected/records/` |
 
-每个环境有 4–20 GHz 共 17 档载频。完整注册表为 `ops/dataset_split_20260926/registry.json`。验证集历史目录名为 `test`，这里的 216 环境已用于方法选择，不能作为最终独立测试报告。
+Each environment covers 17 carriers from 4 to 20 GHz. Membership and seed separation are recorded in `ops/dataset_split_20260926/registry.json`. The 216-environment folder named `test` is the validation split; it is not the independent final test set. Shared views, nested training subsets, and repeated noise draws do not add independent environments.
 
-`outputs/fair_view_3456_20260926` 将同一批训练环境和验证环境组织为共享读取视图；兼容视图和历史来源目录不增加独立样本数。保留这些路径是为了维持原始清单、文件哈希和模型来源关系。
+## Stored arrays and their roles
 
-## 输入、标签与字段
+- **Observable input:** each training `environment_XXXXX/data.npz` stores `X` as `float32[17, 2513]`. It contains combined pilot I/Q from 16 probes, carrier frequency, pilot quality, and permitted receiver calibration statistics. Fields such as `single_nmse` and `robust_nmse` are offline candidate-evaluation information, not extra online inputs.
+- **Control supervision:** `baseline_results/20260925_full_baselines/fair_3456/teacher_labels/records/` contains `control_code` as `int16[17, 128]`. The first 64 columns are delay codes 0–76; the remaining 64 are optical attenuation codes 0–24. Multiply by 19.53125 ps and 0.5 dB, respectively, to obtain physical settings.
+- **Response supervision:** `baseline_results/20260925_full_baselines/scale_3456/targets/train_response.npy` is `complex64[58752, 64, 31]`. The corresponding `fair_3456/targets/` view serves the same training cohort. Match records using the protocols and environment manifests.
+- **Base test records:** each `carrier_XX.npz` in `20260926_final864_selected/records/` includes `public_X[2513]`, `control_code[21, 128]`, `metrics[21, 13]`, and applicable feedback traces.
+- **64-probe extension:** `20260927_uniform64_all13/records/` adds eight configurations over the same environments and carriers. Its analysis combines the 13 baselines and proposed method at the common budget.
 
-训练目录中，每个 `environment_XXXXX/data.npz` 的 `X` 为 `float32[17,2513]`。它由 16 套初始探测的 I/Q 导频、载频、导频质量及允许的接收统计量组成。`single_nmse`、`robust_nmse` 等字段是离线候选评价资料，不是新增在线输入。
+Always read each archive's `protocol.json` for method names, metric order, and provenance. True propagation parameters are used for generation and offline supervision. Test payload symbols are used for scoring after control selection. Neither is additional input to the deployed controller.
 
-直接控制监督位于 `baseline_results/20260925_full_baselines/fair_3456/teacher_labels/records`，其中 `control_code` 为 `int16[17,128]`。前 64 维是延时码 0–76，后 64 维是衰减码 0–24；分别乘以 19.53125 ps 和 0.5 dB 才是物理设置。
+## Models and result records
 
-响应监督位于 `baseline_results/20260925_full_baselines/scale_3456/targets/train_response.npy`，形状为 `complex64[58752,64,31]`；同内容的 `fair_3456/targets` 用于共享训练视图。使用对应协议及环境清单确定记录顺序，不按文件系统遍历顺序拼接。
+The frozen runtime bundle is `baseline_results/20260925_full_baselines/fair_3456/runtime_bundle/`. Component A uses the model from `scale_3456/response_n3456_fixed_epochs/`. Component B uses fitted statistics from `diagnostics/20260926_joint_refinement_train3456/` and `diagnostics/20260926_measurement_refinement_fit_3456/`.
 
-最终测试每个环境有 17 个 `carrier_XX.npz`。其中 `public_X` 为 `[2513]`，`control_code` 为 `[21,128]`，`metrics` 为 `[21,13]`，并保存使用反馈的方法的实际控制轨迹。方法顺序和指标顺序分别由同级 `protocol.json` 的 `methods` 与 `metric_order` 定义；测试参考信息仅用于评价。
+The base and extended test records together cover 29 configurations and **425,952 method–condition evaluations**. These include two probe budgets, necessary ablations, and the privileged teacher/digital MRC references. They are not 29 distinct baselines. The paper's main comparison uses 13 baselines plus the proposed method, each with 64 probes.
 
-## 模型与结果
+The supplements also include the nine distinct training-scale models and their checkpoints, raw validation results, transmitted/received constellation arrays, and the 102-input timing study. Failed or exploratory runs retain their original status and do not enter the final ranking.
 
-当前冻结模型包为 `baseline_results/20260925_full_baselines/fair_3456/runtime_bundle`。组件 A 的最终权重来源为 `scale_3456/response_n3456_fixed_epochs`，组件 B 的频率和空间校正统计位于 `diagnostics/20260926_joint_refinement_train3456` 与 `diagnostics/20260926_measurement_refinement_fit_3456`。
+## Download and verify
 
-最终测试已完成 864/864 环境、14,688 个环境—载频条件及 308,448 个方法—条件评价。`baseline_results/20260926_final864_selected/analysis` 保存汇总、分组、比较和审计。21 项包含 13 个基线、两个主方法、四个必要消融及两个额外信息参考。
-
-## 下载与完整性核对
-
-在公开仓库根目录执行：
+From the repository root:
 
 ```bash
 python3 source_codes/release_tools/fetch_artifacts.py --list
@@ -42,6 +40,6 @@ python3 source_codes/release_tools/fetch_artifacts.py --extract
 python3 source_codes/release_tools/fetch_artifacts.py --verify-only
 ```
 
-`RELEASE_DATA.json` 列出附件大小、下载地址和 SHA-256；`release_indices/` 提供逐文件校验清单。附件恢复原目录，并保留冻结模型包依赖的硬链接关系。
+[Release `data-2026-10-01`](https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/tag/data-2026-10-01) provides the complete manifest. Unchanged base assets remain in `data-2026-09-26`; the downloader resolves both releases automatically. The full download is approximately 7.87 GiB, with additional disk space needed for extraction and cached archives.
 
-本机工作目录另保留 OSD 参数来源、逐节点校准与文献核查记录；它们与当前训练数据分开。公开附件采用经核对的研究仿真结果，局部校准不扩大解释为所有工况下对完整 OSD 系统的逐点等价。OptiSystem 安装程序和许可材料不属于数据附件。
+[RELEASE_DATA.json](RELEASE_DATA.json) records asset locations, sizes, and SHA-256 digests. Compressed indices in `release_indices/` identify every restored file. Downloads preserve the original relative paths and required model-bundle hardlinks. Simulator installers and license materials are not part of the research dataset.

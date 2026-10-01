@@ -1,8 +1,8 @@
 {
   "schema": "mwp-public-release-v1",
   "repository": "https://github.com/warmjademe/Microwave_Photonic_Beamform",
-  "release_tag": "data-2026-09-26",
-  "source": "frozen experiment files synchronized from huashuo",
+  "release_tag": "data-2026-10-01",
+  "source": "Verified frozen experiment artifacts for the manuscript",
   "partitions": {
     "train": 3456,
     "validation": 216,
@@ -442,7 +442,483 @@
           "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-09-26/mwp-evidence-data-2026-09-26.tar.gz.part004"
         }
       ]
+    },
+    {
+      "group": "uniform64",
+      "name": "mwp-uniform64-data-2026-10-01.tar.gz",
+      "bytes": 451134915,
+      "sha256": "f00612a4ac74b0d2da1b561e363b69af802dc7abc7a3c0f85db1ef086fe6c232",
+      "members": 31255,
+      "uncompressed_member_bytes": 573329634,
+      "file_index": "dataset_simulation/release_indices/uniform64.files.json.gz",
+      "file_index_sha256": "2571ff4e22a4875aadb7f14df8dfc79363e90879eef086992f945c109fbc9c77",
+      "parts": [
+        {
+          "name": "mwp-uniform64-data-2026-10-01.tar.gz.part001",
+          "bytes": 67108864,
+          "sha256": "6eaf1f35cc43945acf2c1cdc1be023b4314c1d06a73b89eb4bb111474af934c9",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-uniform64-data-2026-10-01.tar.gz.part001"
+        },
+        {
+          "name": "mwp-uniform64-data-2026-10-01.tar.gz.part002",
+          "bytes": 67108864,
+          "sha256": "1fbc35c084e033ce53ad219db92c8ba4c7a80b0089417e05b7e964e153ff88ed",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-uniform64-data-2026-10-01.tar.gz.part002"
+        },
+        {
+          "name": "mwp-uniform64-data-2026-10-01.tar.gz.part003",
+          "bytes": 67108864,
+          "sha256": "9f76c753a7661f99bcb14b6a12520cb80f0158524b4a04af630cebe6475221f0",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-uniform64-data-2026-10-01.tar.gz.part003"
+        },
+        {
+          "name": "mwp-uniform64-data-2026-10-01.tar.gz.part004",
+          "bytes": 67108864,
+          "sha256": "567888aeaaa594eb27d7252f5b20724cab26c989e78bf37c693aa0d58436f2e4",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-uniform64-data-2026-10-01.tar.gz.part004"
+        },
+        {
+          "name": "mwp-uniform64-data-2026-10-01.tar.gz.part005",
+          "bytes": 67108864,
+          "sha256": "de8b9d32fbb9657b9e9e7bd2d3a87a492248c0c9f31de62b195889d45d91e641",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-uniform64-data-2026-10-01.tar.gz.part005"
+        },
+        {
+          "name": "mwp-uniform64-data-2026-10-01.tar.gz.part006",
+          "bytes": 67108864,
+          "sha256": "9f806e222f9c8352a1e2005676ccb90c81be3e10bbd88800b807951e7090ef66",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-uniform64-data-2026-10-01.tar.gz.part006"
+        },
+        {
+          "name": "mwp-uniform64-data-2026-10-01.tar.gz.part007",
+          "bytes": 48481731,
+          "sha256": "275c788239bbe2bc49dc645078336c5a5ddfbc4c67546771402a445295023edc",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-uniform64-data-2026-10-01.tar.gz.part007"
+        }
+      ]
+    },
+    {
+      "group": "training_studies",
+      "name": "mwp-training_studies-data-2026-10-01.tar.gz",
+      "bytes": 3932141181,
+      "sha256": "9c8425d9e91419f3852c8132c4e03818bed844e757a0633691b4264977b976eb",
+      "members": 17044,
+      "uncompressed_member_bytes": 4978685496,
+      "file_index": "dataset_simulation/release_indices/training_studies.files.json.gz",
+      "file_index_sha256": "fc57fa38ab9346c93a8c574633e896047ad87fec324866232dc0b4933d3e3136",
+      "parts": [
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part001",
+          "bytes": 67108864,
+          "sha256": "be03072f51ffd632d091dd5824d72b075a73a1afc0ed02ff07af42ede3704e1d",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part001"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part002",
+          "bytes": 67108864,
+          "sha256": "d2a4832eee3ce2e7b7ef1c5eef5c55639787a9db9afdba7298a7278b3dd4b7fc",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part002"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part003",
+          "bytes": 67108864,
+          "sha256": "cea4f588859430d88885a22b3ddce798a02041ad66b51e8513bbbd6a3b3b400e",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part003"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part004",
+          "bytes": 67108864,
+          "sha256": "d117a3dae96478e310ed8ab2abdffb7750c1da20fad8972a56061150413b415c",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part004"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part005",
+          "bytes": 67108864,
+          "sha256": "0d57d84ec1ad2c9b2f3f4b63998dd920e5fc38e2bd3f7b8f56e0426d503298e9",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part005"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part006",
+          "bytes": 67108864,
+          "sha256": "99f662c15be1025bdbe93aaeaa619f243ea7c0ac8adbf72c847d68ed93aa3bd0",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part006"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part007",
+          "bytes": 67108864,
+          "sha256": "9a4684e449f1d8192404a50bdc0966da930426a88e7b514c094d1f7eb1555085",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part007"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part008",
+          "bytes": 67108864,
+          "sha256": "0c9cafc67f471931284ec5f27418859eed3e20fce6eedc397f7a014b06f623f4",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part008"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part009",
+          "bytes": 67108864,
+          "sha256": "1e79a3f8f07c8109906e4ebab3114a91f1bca3f53a1ac6f057c2b747584692be",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part009"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part010",
+          "bytes": 67108864,
+          "sha256": "aadce17876966f944ece3bc83923ad2b16d6874b27f64de86dd1e52a7489ebe9",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part010"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part011",
+          "bytes": 67108864,
+          "sha256": "e2bf662bed0a6a2cbcf75f56b6abf1890cda7a52fa055a98632ff8e6447dc60d",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part011"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part012",
+          "bytes": 67108864,
+          "sha256": "f6e294f19f40bde7d3d1b5f2640027fc8ffa46a9cbfb796099959db7c2444aa3",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part012"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part013",
+          "bytes": 67108864,
+          "sha256": "949c4073d7bb4c4c1e050b5a3b3569fa37df361ad4299bd8fc58bfb365da003d",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part013"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part014",
+          "bytes": 67108864,
+          "sha256": "42a0d4b99954ff071c0db78896c843327648addf5e3596ed18054abbe3bec66e",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part014"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part015",
+          "bytes": 67108864,
+          "sha256": "2f60a90b42f53840efda8a7c1e7f4c892de0ed9436cbb8dd5fbe0fb85d9b6b36",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part015"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part016",
+          "bytes": 67108864,
+          "sha256": "644de8b991041f405d1829e8689016e18c424c90589883633248d5667a608c6f",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part016"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part017",
+          "bytes": 67108864,
+          "sha256": "86d3fae9518875b8a072b1743936a4dbc49d524f95456bae01bfe4566c1c6e39",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part017"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part018",
+          "bytes": 67108864,
+          "sha256": "99d4b1c413fc96f8f4f0129d2bc8a0cda0f65fc838d12fcd625420bf8460ec67",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part018"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part019",
+          "bytes": 67108864,
+          "sha256": "3b0500ea67ba330b2464a0770ad114abf32296e028c4e8d087bfdfa9afcb91c7",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part019"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part020",
+          "bytes": 67108864,
+          "sha256": "ef2a91bf21182355cc93ff3f6efac1e08260aee37a5f38045b716392f27cb4c4",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part020"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part021",
+          "bytes": 67108864,
+          "sha256": "0ccb72dcbed27984de7468f6db9e44f72cccc365d8c0b9e380ce562dfdf6bfcb",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part021"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part022",
+          "bytes": 67108864,
+          "sha256": "e8fbb6690502a9b8456e723ead9ad93c6407159f07df33cf15842254c6521efb",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part022"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part023",
+          "bytes": 67108864,
+          "sha256": "cae42620a8de90a10b8b47b02c918a8e19acc8fbf008ef22a4a996c16d016202",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part023"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part024",
+          "bytes": 67108864,
+          "sha256": "e73834ccf735c0c7ab68cfc3135776c3fd00c9f1bb2aebcc562690e0d6ae9511",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part024"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part025",
+          "bytes": 67108864,
+          "sha256": "e45d7a1307136e1d12ba0d1def1e96edb39bc91d7cea3dc7a1060ce7143058a6",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part025"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part026",
+          "bytes": 67108864,
+          "sha256": "99cc11dd24b51377772bd2c50ac0faa829388c15a851ecda8feef2d986c321e7",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part026"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part027",
+          "bytes": 67108864,
+          "sha256": "7be913910f81b4a4f6cb50b87e2fc7689acbe23ec2c9631163450895d1647499",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part027"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part028",
+          "bytes": 67108864,
+          "sha256": "cd49a571a4edf8729f3720a5851adf9af6e2ab6305123c96e90061f140d430f8",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part028"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part029",
+          "bytes": 67108864,
+          "sha256": "336ba219569c83b9d83e7901e34f225e85f3d89fcc0b41be63a5870599bf9a85",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part029"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part030",
+          "bytes": 67108864,
+          "sha256": "5faf0e7f0a88631a95126ee51ba66190d64f6b9d4d72188907b622f459b3857a",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part030"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part031",
+          "bytes": 67108864,
+          "sha256": "f3cdada6044744a9c19b43167b6ccd0e31ed5724726147ae074be21b7703582a",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part031"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part032",
+          "bytes": 67108864,
+          "sha256": "4afc3bf6a61f96c873b0fb184c877a0aafd8ee45f5ea9df2e864e9c436a7fe8a",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part032"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part033",
+          "bytes": 67108864,
+          "sha256": "68e91d23820b63787a4d6766dd33fa029218e082ac49cfaefc7660119b8a64bf",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part033"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part034",
+          "bytes": 67108864,
+          "sha256": "0c3a4c31bb35fa8f8872c8889a5b962635d253673162554b057d353711a99930",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part034"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part035",
+          "bytes": 67108864,
+          "sha256": "4467a2c056a40cd0d3bb9cb9622787f0acf818a02be3590cfd68d353af59eac8",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part035"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part036",
+          "bytes": 67108864,
+          "sha256": "e976f793fa8ffe9591c24586707878b1d77f00f8dd6e59071a27f3850cdc8bdc",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part036"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part037",
+          "bytes": 67108864,
+          "sha256": "0840e5e5cadffaa4e4206af246a253bb783e01f61219c2a5bff63624d0f64442",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part037"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part038",
+          "bytes": 67108864,
+          "sha256": "3fc0ba21b91e4607e4384005ccdc62487e51f9316d739feaa8a161ac5cb5acd0",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part038"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part039",
+          "bytes": 67108864,
+          "sha256": "466933be25ecea017c3a1c13331da04bd2edf62d739141291adaf5bce3ed17ea",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part039"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part040",
+          "bytes": 67108864,
+          "sha256": "950c02c5ebcf5cc8268e739aa2779812f37b0cf0b4ffa3d5a905aeb75760382e",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part040"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part041",
+          "bytes": 67108864,
+          "sha256": "6a546b5e3d141dbe235997f565bd9fc2f62cec2693a5c0c37f72fdc7a4f22679",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part041"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part042",
+          "bytes": 67108864,
+          "sha256": "6924e7b3899759ecebf077b1fbbe7fb4d08fc76542a4e43b01f6621f5a9ee65c",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part042"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part043",
+          "bytes": 67108864,
+          "sha256": "7e3ab54c73c79b0adbbcfaa92ac5fe6c5d15e2f898d9a69db1dd749eb07e37ef",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part043"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part044",
+          "bytes": 67108864,
+          "sha256": "ea4d246fec96e3041581097cd1d45475a898becf92104a317ef5628a8b95d933",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part044"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part045",
+          "bytes": 67108864,
+          "sha256": "2b2577a1951c232d24a119dd6a3779086963ebbd16797d8712f099d0ce859f86",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part045"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part046",
+          "bytes": 67108864,
+          "sha256": "9716231ebab2490f3ab881f5e947206ed7e3bac7c33b5096c20fb04df8dd66a1",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part046"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part047",
+          "bytes": 67108864,
+          "sha256": "b4e7a06f2a57f74e1da8decd2357463492ff955a5086429c867230166a09aa30",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part047"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part048",
+          "bytes": 67108864,
+          "sha256": "2513585bb6bbd37512fc91c8dc18ca21ddd03d02a31ab8ae0a15ffc087ddb140",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part048"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part049",
+          "bytes": 67108864,
+          "sha256": "ee2c9cce690442786aab04bb331643815d88a7d28ced27fc9d1da1d8b071bcb3",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part049"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part050",
+          "bytes": 67108864,
+          "sha256": "5ee98a1bc2328e6ca1c5ebfb4888d106e41b569c64ef1098db6c1fcc11af1c97",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part050"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part051",
+          "bytes": 67108864,
+          "sha256": "a9a985b5834270bcbb286cd8cb7ba264b224704ddc9410b02adf2f1888e9186a",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part051"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part052",
+          "bytes": 67108864,
+          "sha256": "f34076e904b4e823fbe7bdf988ce29171820c9139f37a8eab17d2f63b5b1ef59",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part052"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part053",
+          "bytes": 67108864,
+          "sha256": "fc1938f129c10430217b2e1abc0f3cf5acefda309344a79722f806b6855d9208",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part053"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part054",
+          "bytes": 67108864,
+          "sha256": "d6797093635ddbfac910e914194907b7d9f3a8c1327d06748f1c6a0eefd00207",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part054"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part055",
+          "bytes": 67108864,
+          "sha256": "43fb52cda169b1f090510a1045f669fb09fd4da1a42a13c07d3f6de5426d44ca",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part055"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part056",
+          "bytes": 67108864,
+          "sha256": "370b7c9370584f5c50f87dc1ddcc7e6ce7688b50d423eab9374eff47f8f46879",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part056"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part057",
+          "bytes": 67108864,
+          "sha256": "b4091d4bed6429ff1e75853a36a23d5e631630eb1f97d10dc9a50c1ef6b41efc",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part057"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part058",
+          "bytes": 67108864,
+          "sha256": "96055488ce17da73b55382152be1404ce53431a379cb9af4be69bc001d7d6728",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part058"
+        },
+        {
+          "name": "mwp-training_studies-data-2026-10-01.tar.gz.part059",
+          "bytes": 39827069,
+          "sha256": "a5fff79d38ecec6493cfdee6aab6f72952a548bb6f2d7caee94f642cc94817cf",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-training_studies-data-2026-10-01.tar.gz.part059"
+        }
+      ]
+    },
+    {
+      "group": "paper_evidence",
+      "name": "mwp-paper_evidence-data-2026-10-01.tar.gz",
+      "bytes": 282095229,
+      "sha256": "a5838b3b0e2fbc249e41fefd98c08f87c75198073ab1e1eecd1dab724c0b1cd9",
+      "members": 5926,
+      "uncompressed_member_bytes": 363590058,
+      "file_index": "dataset_simulation/release_indices/paper_evidence.files.json.gz",
+      "file_index_sha256": "df1f7a7e5f249980598915b4522cd2942170ac0b11871e834d759a03ab4cf980",
+      "parts": [
+        {
+          "name": "mwp-paper_evidence-data-2026-10-01.tar.gz.part001",
+          "bytes": 67108864,
+          "sha256": "d9b16a307a1a40a50b435900d6721a7895eda204f8454deb7672ebef27d20660",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-paper_evidence-data-2026-10-01.tar.gz.part001"
+        },
+        {
+          "name": "mwp-paper_evidence-data-2026-10-01.tar.gz.part002",
+          "bytes": 67108864,
+          "sha256": "9ec2bd9ab5d30ce72eb369ebdbdf717fc32eac6e426bdabdccf1f049941dea3f",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-paper_evidence-data-2026-10-01.tar.gz.part002"
+        },
+        {
+          "name": "mwp-paper_evidence-data-2026-10-01.tar.gz.part003",
+          "bytes": 67108864,
+          "sha256": "eb16d3702c7a60c0c2f1d44aeb145faf88ae2c425931a1d5882808e9cda20820",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-paper_evidence-data-2026-10-01.tar.gz.part003"
+        },
+        {
+          "name": "mwp-paper_evidence-data-2026-10-01.tar.gz.part004",
+          "bytes": 67108864,
+          "sha256": "b26b3b1ad564b825b0683bb350fc936884380142c11b7fd554284e53cc30eb53",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-paper_evidence-data-2026-10-01.tar.gz.part004"
+        },
+        {
+          "name": "mwp-paper_evidence-data-2026-10-01.tar.gz.part005",
+          "bytes": 13659773,
+          "sha256": "69e6c770ca7b7fac6ae06554088dd5ef41fe3cdc0e6f1b052861087884922f84",
+          "url": "https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/download/data-2026-10-01/mwp-paper_evidence-data-2026-10-01.tar.gz.part005"
+        }
+      ]
     }
   ],
-  "transport": "ordered 64 MiB parts; per-part and reassembled SHA-256 verification"
+  "transport": "ordered 64 MiB parts; per-part and reassembled SHA-256 verification",
+  "base_release_tag": "data-2026-09-26",
+  "paper_coverage": {
+    "training_environments": 3456,
+    "validation_environments": 216,
+    "test_environments": 864,
+    "carriers_per_environment": 17,
+    "main_comparison_baselines": 13,
+    "main_comparison_probes": 64,
+    "total_budget_configurations": 29,
+    "method_condition_evaluations": 425952,
+    "training_scale_unique_models": 9,
+    "timing_inputs": 102,
+    "timing_configurations": 27
+  }
 }
