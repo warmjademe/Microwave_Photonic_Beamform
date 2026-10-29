@@ -1,14 +1,16 @@
 # Microwave Photonic Receive Beam Control
 
-Simulation datasets and research code for **Microwave Photonic Receive Beam Control for Beyond-Line-of-Sight Wireless Communications: Complex Response Learning and Joint Measurement Correction**.
+Simulation datasets and research code for **Microwave Photonic Receive Beam Control for Beyond-Line-of-Sight Wireless Communications: Complex Response Learning and Candidate Feedback**.
+
+**Revision, 30 October 2026:** the method, ablation and supplementary evidence use complex response learning A and candidate feedback F. Joint correction B is historical evidence, not a component of the revised method. The download manifest combines unchanged base datasets with the completed revision studies.
 
 **Authors:** Luqiang Wang, Tao Pu, Jin Li, Jilin Zheng, and Hua Zhou.
 
-[Results dashboard](https://guangzi.qyb.ink/baselines.html) · [Data and model release](https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/tag/data-2026-10-01) · [Paper-to-artifact guide](dataset_simulation/PAPER_ARTIFACTS.md) · [Download manifest](dataset_simulation/RELEASE_DATA.json)
+[Original-results dashboard](https://guangzi.qyb.ink/baselines.html) · [Revision data release](https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/tag/data-2026-10-30) · [Paper-to-artifact guide](dataset_simulation/PAPER_ARTIFACTS.md) · [Download manifest](dataset_simulation/RELEASE_DATA.json)
 
 The study addresses receive control when multipath propagation, attenuation, fading, and receiver noise distort a desired wireless signal. A supervised model estimates the complex response of a microwave photonic receiver, and a constrained solver converts that estimate into per-branch delay and optical attenuation settings. The repository provides the simulation and learning code, baseline implementations, and downloadable data, supervision, models, and evaluation records.
 
-The main contributions are a simulation dataset for hardware-constrained receive control, a method combining complex response learning with joint measurement correction, and shared artifacts for reproducible research.
+The main contributions are a simulation dataset for hardware-constrained receive control, a method combining complex response learning with candidate feedback selection, and shared artifacts for reproducible research.
 
 ## Communication and receiver model
 
@@ -25,7 +27,7 @@ Transmitted QPSK–OFDM signal
     → demodulation, equalization, and payload evaluation
 ```
 
-All 64 optical branches are combined before common photodetection. The scenario contains only the desired signal; independent interfering transmitters, temperature drift, and additional random device mismatch are outside the current model. Fixed insertion loss and receiver noise are included.
+All 64 optical branches are combined before common photodetection. The nominal dataset contains only the desired wireless signal, fixed insertion loss, and receiver noise. It excludes independent interfering transmitters and temperature drift. A separate completed sensitivity study examines static device offsets, laser relative intensity noise, and changes to propagation conditions without retraining the controller.
 
 | Parameter | Setting |
 |---|---|
@@ -59,11 +61,11 @@ The input contains 1,984 pilot I/Q values from 16 probes, 31 frequencies, and tw
 The method has two components:
 
 1. **A — Complex response learning:** learn the spatial and frequency structure of the equivalent response from the shared observations.
-2. **B — Joint measurement correction:** refine the response estimate using current measurements and residual statistics fitted on training data.
+2. **F — Candidate feedback selection:** measure the model candidate and geometric-codebook settings, then select the setting with the highest observed pilot score.
 
-A shared discrete solver maps the estimated response to legal delay and attenuation codes. When further probes are available, a common candidate-feedback procedure measures proposed controls and chooses the one with the highest measured pilot score. Offline response targets and teacher controls are supervision, not additional online inputs.
+A shared discrete solver maps A's estimated response to legal delay and attenuation codes. F tests that candidate first and spends the remaining probe budget on a fixed seeded geometric-codebook order, reusing measurements of duplicate settings. It returns the highest-scoring measured control, including the initial settings. F does not update network weights or the estimated response. Offline response targets and teacher controls provide training supervision, not additional online inputs.
 
-The paper evaluates two configurations selected on validation data: **A+B with direct output at 16 probes**, and **A with candidate feedback at 64 probes**. The reported 64-probe result uses the latter configuration; B is evaluated through the direct-output component ablations below. Probe budget is an experimental hyperparameter.
+The main configuration is **A+F with 64 probes**, corresponding to `cnn_warm64` in the frozen code. The direct-output ablation executes A's solver candidate after 16 initial probes and removes F. This differs from retaining F with a budget of 16, which can only choose among initially measured controls. The original B implementation and records remain historical evidence; B is not a component of the revised method.
 
 ## Dataset
 
@@ -71,11 +73,11 @@ The paper evaluates two configurations selected on validation data: **A+B with d
 |---|---:|---:|---:|
 | Training | 3,456 | 17 | 58,752 |
 | Validation | 216 | 17 | 3,672 |
-| Independent test | 864 | 17 | 14,688 |
+| Test, reused in the revision | 864 | 17 | 14,688 |
 
 Sampling uses 216 strata formed by path count, maximum relative delay, angular spread, and reference power. Each stratum contributes 16 training, one validation, and four test environments. Environment seeds are disjoint, and all carriers and noise repetitions of an environment stay in the same split. Frequency records are not counted as independent environments.
 
-All learned methods use the same training environments and observable inputs. Control-regression networks learn teacher controls, whereas component A learns equivalent complex responses. Model selection uses the validation split. After control selection, an independent payload frame is used for scoring; test payload symbols do not enter control selection or equalizer fitting.
+All learned methods use the same training environments and observable inputs. Control-regression networks learn teacher controls, whereas component A learns equivalent complex responses. The original weights and operating configurations were selected before their test evaluation. The revised component interpretation and supplementary comparisons reuse the same 864 test environments; these are not a new independent confirmation set. After control selection, an independent payload frame is used for scoring; test payload symbols do not enter control selection or equalizer fitting.
 
 ## Main results: 13 baselines at 64 probes
 
@@ -102,30 +104,52 @@ All methods are evaluated on the same 864 test environments and 17 carriers, usi
 
 BER, SER, and BLER denote bit, symbol, and block error rates. EVM is root-mean-square error vector magnitude after equalization; paired output SNR is measured before equalization. These measure different aspects of reception and should not be treated as interchangeable metrics.
 
-Compared with fixed scan, the lowest-BER baseline, the proposed method reduces BER by **0.3569 percentage points (3.44% relative)**. The environment-paired 95% bootstrap interval for the BER difference is **[−0.5027, −0.2112] percentage points**. It wins in 511 environments, ties in 32, and loses in 321 after aggregation across carriers. The improvement is an overall result, not a claim of winning in every environment or carrier band.
+Compared with fixed scan, the lowest-BER of the 13 initial baselines, the proposed method reduces BER by **0.3569 percentage points (3.44% relative)**. The environment-paired 95% bootstrap interval for the BER difference is **[−0.5027, −0.2112] percentage points**. It wins in 511 environments, ties in 32, and loses in 321 after aggregation across carriers. The improvement is an overall result, not a claim of winning in every environment or carrier band.
+
+A supplementary real-valued response CNN with matched training supervision, solver, and feedback reaches **10.0671% BER**, compared with **10.0136%** for A+F. The real-minus-complex difference is **0.0535 percentage points**, with paired 95% interval **[0.0291, 0.0774]**. This compares whole estimators: their convolution, activation, and conditioning differ, so it does not isolate one complex-valued operation. Four CNN/Transformer controls trained with a reception-quality objective reach **10.5295%–10.5457% BER** with feedback; their differences from their original control-regression versions have paired intervals that include zero.
 
 The offline teacher accesses internal responses, and ideal digital maximum-ratio combining (MRC) assumes different receive hardware. Both are reference results rather than baselines in the same-information ranking.
 
 ### Component ablations
 
-The direct-output comparison holds the budget at 16 probes and uses the full independent test set.
+The revised factorial comparison uses all 864 existing test environments and 17 carriers. Replacing A retains the same solver and output procedure. Removing F also removes 48 additional measurements.
 
-| Response/control configuration | BER (%) ↓ |
-|---|---:|
-| Conventional covariance response | 13.7654 |
-| A only | 12.9025 |
-| Conventional response + B | 13.5856 |
-| A+B | 12.3131 |
+| Response/control configuration | Probes | BER (%) ↓ |
+|---|---:|---:|
+| Conventional covariance response | 16 | 13.7654 |
+| A only | 16 | 12.9025 |
+| Conventional response + F | 64 | 10.2451 |
+| A+F | 64 | 10.0136 |
+| Fixed scan | 64 | 10.3705 |
 
-Removing A or B from A+B increases BER by 1.2726 or 0.5894 percentage points, respectively. At 64 probes, learned-response candidate generation achieves 10.0136% BER versus 10.2451% for conventional-response candidate generation under the same feedback procedure.
+At 64 probes, replacing A with conventional response estimation increases BER by **0.2315 percentage points**, with paired 95% interval **[0.2018, 0.2606]**. Removing F increases BER by **2.8889 percentage points**, with interval **[2.7246, 3.0549]**, while reducing measurements from 64 to 16. These comparisons support A's same-budget contribution and F's benefit together with its added measurement cost. The corresponding SNR intervals include zero, and the BER interaction indicates a smaller absolute benefit of A when F is present rather than a superadditive gain.
 
-The [dashboard](https://guangzi.qyb.ink/baselines.html) provides full-test metrics, paired comparisons, carrier and power groups, constellation examples, and timing measurements. Machine-readable summaries are available as [JSON](https://guangzi.qyb.ink/results-20261001.json) and [CSV](https://guangzi.qyb.ink/results-20261001.csv).
+Three training seeds retain the BER comparison directions. A+F has mean **9.9941% BER** and between-seed sample standard deviation **0.0181 percentage points**; A alone has mean **12.8619%** and standard deviation **0.0844 percentage points**. Seed 0 remains the primary model, and the three runs use the same test environments.
+
+## Sensitivity and online cost
+
+The 11-condition sensitivity study retains all 864 existing environments and 17 carriers, comparing A+F, conventional estimation+F and fixed scanning at 64 probes. Conditions change relative path delay, angular offsets, desired-signal power, independent laser RIN, static branch delay or static optical loss. All conditions and negative results are retained. A+F-minus-fixed-scan BER intervals are below zero in ten conditions; at RIN −130 dB/Hz the difference is −0.0210 percentage points, with paired 95% interval [−0.1686, 0.1205]. A+F BER rises to 21.6008% there. These are transformations of the existing simulated environments, not independent field data or time-varying-channel tests.
+
+Software timing uses 102 inputs chosen without quality scores, two warm-ups and three uninstrumented repetitions per input. Controls and complete feedback traces match the saved experiment. The full controller-call boundary includes result packaging and excludes measurement-replay callbacks, model loading and external correctness checks.
+
+| Controller | Probes | Mean software time (ms) | Median (ms) | 95th percentile (ms) |
+|---|---:|---:|---:|---:|
+| A only | 16 | 16.358 | 16.331 | 16.761 |
+| A+F | 64 | 28.551 | 28.503 | 28.943 |
+| Conventional estimation+F | 64 | 30.550 | 30.523 | 30.968 |
+| Fixed scan | 64 | 8.187 | 8.150 | 8.381 |
+
+Separate instrumented runs give A+F response estimation 1.746 ms, including 1.397 ms network forward, discrete solving 14.480 ms, and other control operations 12.329 ms. The network time is nested, not added twice. Assuming 1.24 microseconds acquisition and 1 microsecond switching per probe, plus one final switch, adds 0.14436 ms at 64 probes. Software plus that assumption is 28.695 ms, excluding unmeasured device communication and settling; this is not hardware-loop latency.
+
+The 17,540 parameters occupy 70,160 bytes. A separate single-controller process reaches 1005.4 MiB peak RSS, 33.1 MiB CUDA peak allocated memory and 34.0 MiB reserved memory; the largest sampled driver-reported usage is 518 MiB. Process/library overhead and driver/context storage differ from parameter storage. Reception benefit must be weighed against this implementation's computation and the required channel-stability interval.
+
+The [original-release dashboard](https://guangzi.qyb.ink/baselines.html) provides the original full-test results. Its [JSON](https://guangzi.qyb.ink/results-20261001.json) and [CSV](https://guangzi.qyb.ink/results-20261001.csv) identify that frozen version; they do not yet include the revision supplements described above. Use the revision release and artifact guide for the current A/F studies.
 
 ## Download the data and models
 
-Source code is stored in the main branch. The complete download manifest is published with [release `data-2026-10-01`](https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/tag/data-2026-10-01).
+Source code is stored in the main branch. The complete download manifest accompanies [release `data-2026-10-30`](https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/tag/data-2026-10-30).
 
-**Artifact coverage:** the manifest includes training, validation, and final-test data; control and response supervision; frozen models and correction statistics; raw records for all 13 baselines at 64 probes; component ablations; training-scale and hyperparameter studies; constellation arrays; and timing records. Unchanged base archives remain in `data-2026-09-26`, while the new release supplies the supplements. **The downloader retrieves both automatically.** The [paper-to-artifact guide](dataset_simulation/PAPER_ARTIFACTS.md) identifies the exact records and code for each research question.
+**Artifact coverage:** the manifest includes training, validation, and test data; control and response supervision; frozen models; raw records for all 13 baselines at 64 probes; A/F ablations; repeated training; training-scale and hyperparameter studies; constellation arrays; sensitivity, timing and memory records. Original B code and statistics remain historical evidence. All eight previous download groups are retained byte-for-byte; the revision adds `revision_core` and `revision_sensitivity_cost`. **The downloader retrieves their dependencies from the corresponding releases automatically.** The [paper-to-artifact guide](dataset_simulation/PAPER_ARTIFACTS.md) identifies the records and code for each research question.
 
 ```bash
 git clone https://github.com/warmjademe/Microwave_Photonic_Beamform.git
@@ -153,8 +177,10 @@ The downloader needs Python 3.9 or newer and only uses the standard library. It 
 | `uniform64` | Additional full-test records for all baselines at 64 probes and combined analysis | 430.2 MiB |
 | `training_studies` | Complete scale-study inputs, targets, checkpoints, and validation records | 3,750.0 MiB |
 | `paper_evidence` | Constellation arrays, plot data, timing records, and supporting checks | 269.0 MiB |
+| `revision_core` | A/F ablation, seeds, hyperparameters, training objectives, matched response estimator, and historical B evidence | See manifest |
+| `revision_sensitivity_cost` | All 11 sensitivity conditions, raw formal timing, full-call timing analysis, and memory measurements | See manifest |
 
-The complete download totals approximately **7.87 GiB**. Archives are split into parts of at most 64 MiB. Allow additional space for extraction and cached archives. Exact sizes and checksums are listed in [RELEASE_DATA.json](dataset_simulation/RELEASE_DATA.json). Supporting exploratory and failed-run records retain their original status and are separate from the final results.
+Archives are split into parts of at most 64 MiB. Allow additional space for extraction and cached archives. Exact sizes and checksums are listed in [RELEASE_DATA.json](dataset_simulation/RELEASE_DATA.json). Supporting exploratory and failed-run records retain their original status and are separate from final results. The revision archives have been extracted through the public reader and checked against every indexed member hash.
 
 To download only training inputs and supervision:
 
@@ -192,17 +218,17 @@ The base test archive contains `public_X[2513]`, `control_code[21, 128]`, and `m
 | [source_codes/dataset_protocol/](source_codes/dataset_protocol/) | Split registration, provenance, and seed checks |
 | `source_codes/baseline_*/` | Nonlearning and supervised baseline implementations |
 | [source_codes/our_method_response_control/](source_codes/our_method_response_control/) | Component A and shared control solving |
-| [source_codes/our_method_joint_refinement/](source_codes/our_method_joint_refinement/) | Component B |
+| [source_codes/our_method_joint_refinement/](source_codes/our_method_joint_refinement/) | Historical B implementation; excluded from the revised method |
 | [source_codes/study_full_baselines/](source_codes/study_full_baselines/) | Shared training, validation, and hyperparameter studies |
 | [source_codes/study_final864/](source_codes/study_final864/) | Released full-test runner and statistical analysis |
-| [source_codes/study_uniform64/](source_codes/study_uniform64/) | All-baseline comparison at 64 actual probes |
+| [source_codes/study_uniform64/](source_codes/study_uniform64/) | Candidate feedback F and all-baseline comparison at 64 actual probes |
 | [source_codes/study_final_timing/](source_codes/study_final_timing/) | Controlled timing replay and audits |
 | [source_codes/paper_results_20260927/](source_codes/paper_results_20260927/) | Paper tables, figures, and constellation reconstruction |
 | [source_codes/release_tools/](source_codes/release_tools/) | Artifact download and integrity verification |
 
-Experiments use Linux, Python 3.11.16, PyTorch 2.8.0+cu128, NumPy 1.26.4, and an NVIDIA RTX 4090. Dependencies are recorded in [requirements-deep.txt](source_codes/requirements-deep.txt). Neural networks use seed 0 and the final checkpoint after 40 epochs; no checkpoint is selected on final-test performance.
+Experiments use Linux, Python 3.11.16, PyTorch 2.8.0+cu128, NumPy 1.26.4, and an NVIDIA RTX 4090. Dependencies are recorded in [requirements-deep.txt](source_codes/requirements-deep.txt). Primary networks use seed 0 and the final checkpoint after 40 epochs. The repeated-training study evaluates A with seeds 0, 1, and 2. Quality-objective controls receive 40 quality-training epochs; models initialized from their original MSE checkpoint have 80 total training epochs. No checkpoint is selected on final-test performance.
 
-The released experiment runners preserve absolute paths, machine checks, and artifact identity checks from the frozen environment. Running them on another system requires adapting those execution constraints and checking numerical consistency. Downloading and checking file integrity is independent of the original experiment machine. Receiver calibration, simulation evidence, and one trained seed do not establish physical-deployment performance or variability across retraining runs.
+The released experiment runners preserve absolute paths, machine checks, and artifact identity checks from the frozen environment. Running them on another system requires adapting those execution constraints and checking numerical consistency. Downloading and checking file integrity is independent of the original experiment machine. The evidence concerns the simulated receiver and evaluated statistical channels; the three training seeds describe limited retraining variation, while measured hardware and propagation remain separate validation tasks.
 
 ## Contact
 
