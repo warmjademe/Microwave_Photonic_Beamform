@@ -45,6 +45,10 @@ All 64 optical branches are combined before common photodetection. The nominal d
 
 Array spacing remains fixed across carriers. The 17 carrier conditions are distinct from the 31 frequencies within each signal band. The dataset uses a statistical propagation model and a calibrated research receiver model; calibration covers the compared device nodes and records, rather than every operating condition of a complete optical frequency-conversion system.
 
+The nominal device parameters come from the supplied OptiSystem project. A parameter audit matched 896 laser entries, five APD parameters and the effective fixed optical loss. The research receiver extends the original inputs, optical detection window, control grid and numerical record length. The primary task concerns propagation impairments with nominal device settings; temperature drift and device-error compensation are separate future studies. All reported reception results are simulations, with physical receiver and coded-protocol evaluation planned separately.
+
+[Appendix A code and protocol](source_codes/revision_scope_20261030/README.md) and [complete array results](dataset_simulation/revision_scope_20261030/array/) compare true delay with centre-frequency-matched phase control over 483,021 deterministic conditions. Their maximum absolute directional-gain difference is 0.1574 dB in the specified 100 MHz band, and high-frequency spatial replicas remain present. This array calculation isolates geometry and control phase; it does not compare complete photonic and electronic hardware or change the receiver benchmark scores.
+
 ## Method and input/output interface
 
 The controller uses combined pilot measurements under known probe settings. It does not require direct digital access to all 64 antenna signals or true propagation parameters.
