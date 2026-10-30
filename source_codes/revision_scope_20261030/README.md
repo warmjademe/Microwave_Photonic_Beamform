@@ -1,6 +1,6 @@
 # Array geometry and matched phase-control diagnostic
 
-This deterministic calculation supports Appendix A and the reply to reviewer 4.4. It compares true time delay with a phase setting that matches the same quantized delays at each centre frequency. It does not train a controller or rerun the receiver benchmark.
+This deterministic calculation supports the receiver-model formulation, RQ1 analysis and reply to reviewer 4.4. It compares true time delay with a phase setting that matches the same quantized delays at each centre frequency. It does not train a controller or rerun the receiver benchmark.
 
 The two controls share the 8 × 8 geometry, 37.47405725 mm spacing, equal amplitudes, and delay codes from the nominal receiver. The fixed grid has 17 carriers from 4 to 20 GHz, 861 steering directions, and 33 frequency offsets: 483,021 paired conditions. `protocol.json` records the grid, checks, reporting rules, and exclusions established before execution.
 
@@ -10,7 +10,7 @@ Results are committed under `dataset_simulation/revision_scope_20261030/array/`:
 
 - `array_response.npz`: `carriers_hz` (17), `steering_deg` (861 × 2), `offsets_hz` (33), `delay_codes` (861 × 64), and `normalised_power` (17 × 861 × 33 × 2). The last axis is true delay followed by matched phase.
 - `summary.json`: all carrier summaries, spatial replicas, checks, and source hashes.
-- `array_ttd_phase.pdf` and `.png`: the array cuts used in the appendix.
+- `array_ttd_phase.pdf` and `.png`: the array cuts used in the RQ1 frequency analysis.
 - `complete.json`: output and executed-source SHA-256 hashes.
 
 The maximum absolute directional-gain difference is 0.157403265 dB. Either control can have the larger gain at individual offsets because frequency-dependent phase interacts with the shared quantization error. High-frequency spatial replicas remain present with true time delay. These results quantify the array response in the specified 100 MHz band; they do not compare complete photonic and electronic receivers or predict multipath BER.

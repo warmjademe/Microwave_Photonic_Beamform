@@ -47,7 +47,7 @@ Array spacing remains fixed across carriers. The 17 carrier conditions are disti
 
 The nominal device parameters come from the supplied OptiSystem project. A parameter audit matched 896 laser entries, five APD parameters and the effective fixed optical loss. The research receiver extends the original inputs, optical detection window, control grid and numerical record length. The primary task concerns propagation impairments with nominal device settings; temperature drift and device-error compensation are separate future studies. All reported reception results are simulations, with physical receiver and coded-protocol evaluation planned separately.
 
-[Appendix A code and protocol](source_codes/revision_scope_20261030/README.md) and [complete array results](dataset_simulation/revision_scope_20261030/array/) compare true delay with centre-frequency-matched phase control over 483,021 deterministic conditions. Their maximum absolute directional-gain difference is 0.1574 dB in the specified 100 MHz band, and high-frequency spatial replicas remain present. This array calculation isolates geometry and control phase; it does not compare complete photonic and electronic hardware or change the receiver benchmark scores.
+[Array-comparison code and protocol](source_codes/revision_scope_20261030/README.md) and [complete array results](dataset_simulation/revision_scope_20261030/array/) support the receiver-model formulation and RQ1 analysis. They compare true delay with centre-frequency-matched phase control over 483,021 deterministic conditions. Their maximum absolute directional-gain difference is 0.1574 dB in the specified 100 MHz band, and high-frequency spatial replicas remain present. This array calculation isolates geometry and control phase; it does not compare complete photonic and electronic hardware or change the receiver benchmark scores.
 
 ## Method and input/output interface
 
@@ -55,12 +55,12 @@ The controller uses combined pilot measurements under known probe settings. It d
 
 | Quantity | Per-carrier representation | Role |
 |---|---|---|
-| Observable input `X` | 2,513 real values | Combined pilot I/Q, carrier frequency, pilot scores, APD noise statistics, and DC optical power |
+| Observable input `X` | 2,513 real values | Combined pilot I/Q, carrier frequency, pilot scores, APD noise statistics, and mean APD DC output current |
 | Response supervision | 64 × 31 complex values | Equivalent response of each branch at each active frequency; available during training |
 | Control supervision | 128 integer codes | Offline teacher targets for supervised control-regression baselines |
 | Executed control | 64 delay codes + 64 attenuation codes | Legal settings applied to the simulated receiver |
 
-The input contains 1,984 pilot I/Q values from 16 probes, 31 frequencies, and two pilot blocks, plus one carrier value, 16 pilot scores, 496 noise-variance values, and 16 optical-power values. Noise and power statistics use the simulator's device calibration interface; a physical implementation would require corresponding receiver calibration or monitoring.
+The input contains 1,984 pilot I/Q values from 16 probes, 31 frequencies, and two pilot blocks, plus one carrier value, 16 pilot scores, 496 noise-variance values, and 16 mean APD DC output currents in amperes. The last values are stored as `probe_apd_dc_a`, with `I_dc = M * (R_pd * P_dc + I_dark)`. These noise and current statistics are provided exactly by the simulator's common calibration interface; finite-sample estimation error is not included. A physical implementation would require corresponding receiver calibration or monitoring. The shared solver separately precomputes nominal branch powers and antenna-noise transfers from fixed device parameters and carrier frequency, without access to test path parameters or payload symbol values.
 
 The method has two components:
 
