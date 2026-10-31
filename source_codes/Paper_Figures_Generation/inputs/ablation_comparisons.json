@@ -1,0 +1,902 @@
+[
+  {
+    "ci95": [
+      -0.009394199758196286,
+      -0.007840223833148842
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "environment_mean_difference": -0.00862894440930494,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.00862894440930495,
+    "favorable_direction": "negative",
+    "id": "A_without_F",
+    "loss_fraction": 0.22800925925925927,
+    "losses": 197,
+    "metric": "ber",
+    "non_ties": 838,
+    "p_value": 1.5164489698890597e-55,
+    "sign_test_bh_q": 3.0328979397781193e-55,
+    "tie_fraction": 0.03009259259259259,
+    "ties": 26,
+    "total": 864,
+    "win_fraction": 0.7418981481481481,
+    "wins": 641
+  },
+  {
+    "ci95": [
+      -0.015031478681302267,
+      -0.012675999499262064
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "environment_mean_difference": -0.01386280878838991,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.013862808788389913,
+    "favorable_direction": "negative",
+    "id": "A_without_F",
+    "loss_fraction": 0.2199074074074074,
+    "losses": 190,
+    "metric": "ser",
+    "non_ties": 840,
+    "p_value": 1.3802734022321254e-59,
+    "sign_test_bh_q": 2.760546804464251e-59,
+    "tie_fraction": 0.027777777777777776,
+    "ties": 24,
+    "total": 864,
+    "win_fraction": 0.7523148148148148,
+    "wins": 650
+  },
+  {
+    "ci95": [
+      -0.023573878336056682,
+      -0.01766748366013071
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "environment_mean_difference": -0.02063759531590414,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.020637595315904145,
+    "favorable_direction": "negative",
+    "id": "A_without_F",
+    "loss_fraction": 0.24074074074074073,
+    "losses": 208,
+    "metric": "block_error_rate",
+    "non_ties": 688,
+    "p_value": 1.1598855164721087e-25,
+    "sign_test_bh_q": 2.3197710329442173e-25,
+    "tie_fraction": 0.2037037037037037,
+    "ties": 176,
+    "total": 864,
+    "win_fraction": 0.5555555555555556,
+    "wins": 480
+  },
+  {
+    "ci95": [
+      -2.403392480635981,
+      -1.9427977131803291
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "environment_mean_difference": -2.185304461691868,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -2.1761588260752944,
+    "favorable_direction": "negative",
+    "id": "A_without_F",
+    "loss_fraction": 0.19560185185185186,
+    "losses": 169,
+    "metric": "rms_evm_percent",
+    "non_ties": 864,
+    "p_value": 2.0949560098546356e-76,
+    "sign_test_bh_q": 4.189912019709271e-76,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.8043981481481481,
+    "wins": 695
+  },
+  {
+    "ci95": [
+      0.2372856692248151,
+      0.45936297003861637
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "environment_mean_difference": 0.6276336060398551,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": 0.34571813127564965,
+    "favorable_direction": "positive",
+    "id": "A_without_F",
+    "loss_fraction": 0.1909722222222222,
+    "losses": 165,
+    "metric": "paired_output_snr_db",
+    "non_ties": 864,
+    "p_value": 6.902164345156076e-79,
+    "sign_test_bh_q": 4.141298607093646e-78,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.8090277777777778,
+    "wins": 699
+  },
+  {
+    "ci95": [
+      -0.002606095221466724,
+      -0.002017769333315765
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": -0.0023145402874411407,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.002314540287441144,
+    "favorable_direction": "negative",
+    "id": "A_with_F",
+    "loss_fraction": 0.23958333333333334,
+    "losses": 207,
+    "metric": "ber",
+    "non_ties": 765,
+    "p_value": 4.982812409324176e-38,
+    "sign_test_bh_q": 7.474218613986263e-38,
+    "tie_fraction": 0.11458333333333333,
+    "ties": 99,
+    "total": 864,
+    "win_fraction": 0.6458333333333334,
+    "wins": 558
+  },
+  {
+    "ci95": [
+      -0.004382294192318506,
+      -0.0034735948590906007
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": -0.003934251792114696,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.003934251792114707,
+    "favorable_direction": "negative",
+    "id": "A_with_F",
+    "loss_fraction": 0.22337962962962962,
+    "losses": 193,
+    "metric": "ser",
+    "non_ties": 766,
+    "p_value": 1.5643124167034653e-44,
+    "sign_test_bh_q": 2.346468625055198e-44,
+    "tie_fraction": 0.11342592592592593,
+    "ties": 98,
+    "total": 864,
+    "win_fraction": 0.6631944444444444,
+    "wins": 573
+  },
+  {
+    "ci95": [
+      -0.012169798474945481,
+      -0.008501838235294046
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": -0.010340073529411764,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.010340073529411797,
+    "favorable_direction": "negative",
+    "id": "A_with_F",
+    "loss_fraction": 0.20023148148148148,
+    "losses": 173,
+    "metric": "block_error_rate",
+    "non_ties": 552,
+    "p_value": 1.0501523101929274e-18,
+    "sign_test_bh_q": 1.5752284652893913e-18,
+    "tie_fraction": 0.3611111111111111,
+    "ties": 312,
+    "total": 864,
+    "win_fraction": 0.4386574074074074,
+    "wins": 379
+  },
+  {
+    "ci95": [
+      -0.6912324732561987,
+      -0.353998989361419
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": -0.7710466071465208,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.5271200353717518,
+    "favorable_direction": "negative",
+    "id": "A_with_F",
+    "loss_fraction": 0.22337962962962962,
+    "losses": 193,
+    "metric": "rms_evm_percent",
+    "non_ties": 852,
+    "p_value": 2.9067246567897093e-60,
+    "sign_test_bh_q": 4.3600869851845637e-60,
+    "tie_fraction": 0.013888888888888888,
+    "ties": 12,
+    "total": 864,
+    "win_fraction": 0.7627314814814815,
+    "wins": 659
+  },
+  {
+    "ci95": [
+      -0.02499285222094505,
+      0.1319772700799428
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": 0.13060292838122828,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": 0.05274177694197846,
+    "favorable_direction": "positive",
+    "id": "A_with_F",
+    "loss_fraction": 0.33101851851851855,
+    "losses": 286,
+    "metric": "paired_output_snr_db",
+    "non_ties": 852,
+    "p_value": 5.095544438750537e-22,
+    "sign_test_bh_q": 1.0191088877501074e-21,
+    "tie_fraction": 0.013888888888888888,
+    "ties": 12,
+    "total": 864,
+    "win_fraction": 0.6550925925925926,
+    "wins": 566
+  },
+  {
+    "ci95": [
+      -0.03683210578418195,
+      -0.0335962276095474
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "environment_mean_difference": -0.035203194180898165,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.03520319418089818,
+    "favorable_direction": "negative",
+    "id": "F_without_A",
+    "loss_fraction": 0.05439814814814815,
+    "losses": 47,
+    "metric": "ber",
+    "non_ties": 837,
+    "p_value": 5.614782175411551e-175,
+    "sign_test_bh_q": 3.3688693052469305e-174,
+    "tie_fraction": 0.03125,
+    "ties": 27,
+    "total": 864,
+    "win_fraction": 0.9143518518518519,
+    "wins": 790
+  },
+  {
+    "ci95": [
+      -0.0572272350920655,
+      -0.05232325653155526
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "environment_mean_difference": -0.05477809403331225,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.05477809403331224,
+    "favorable_direction": "negative",
+    "id": "F_without_A",
+    "loss_fraction": 0.052083333333333336,
+    "losses": 45,
+    "metric": "ser",
+    "non_ties": 837,
+    "p_value": 1.9322224420715796e-177,
+    "sign_test_bh_q": 1.1593334652429478e-176,
+    "tie_fraction": 0.03125,
+    "ties": 27,
+    "total": 864,
+    "win_fraction": 0.9166666666666666,
+    "wins": 792
+  },
+  {
+    "ci95": [
+      -0.07270390795206971,
+      -0.0639297385620915
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "environment_mean_difference": -0.06827001633986927,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.06827001633986929,
+    "favorable_direction": "negative",
+    "id": "F_without_A",
+    "loss_fraction": 0.1111111111111111,
+    "losses": 96,
+    "metric": "block_error_rate",
+    "non_ties": 708,
+    "p_value": 8.322466318971686e-93,
+    "sign_test_bh_q": 4.9934797913830116e-92,
+    "tie_fraction": 0.18055555555555555,
+    "ties": 156,
+    "total": 864,
+    "win_fraction": 0.7083333333333334,
+    "wins": 612
+  },
+  {
+    "ci95": [
+      -8.412913455569553,
+      -7.5040297221046774
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "environment_mean_difference": -8.1765642636829,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -7.956471500718841,
+    "favorable_direction": "negative",
+    "id": "F_without_A",
+    "loss_fraction": 0.06597222222222222,
+    "losses": 57,
+    "metric": "rms_evm_percent",
+    "non_ties": 864,
+    "p_value": 1.5705705666698867e-170,
+    "sign_test_bh_q": 9.423423400019321e-170,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.9340277777777778,
+    "wins": 807
+  },
+  {
+    "ci95": [
+      -0.004378164402488236,
+      0.42721793557166027
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      -1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "environment_mean_difference": 1.0468161270770584,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": 0.2024284567526493,
+    "favorable_direction": "positive",
+    "id": "F_without_A",
+    "loss_fraction": 0.3449074074074074,
+    "losses": 298,
+    "metric": "paired_output_snr_db",
+    "non_ties": 864,
+    "p_value": 5.3104864805290115e-20,
+    "sign_test_bh_q": 7.965729720793517e-20,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.6550925925925926,
+    "wins": 566
+  },
+  {
+    "ci95": [
+      -0.03054913161501159,
+      -0.027245579011174356
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    "environment_mean_difference": -0.02888879005903437,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.028888790059034372,
+    "favorable_direction": "negative",
+    "id": "F_with_A",
+    "loss_fraction": 0.10416666666666667,
+    "losses": 90,
+    "metric": "ber",
+    "non_ties": 826,
+    "p_value": 7.529513985010698e-127,
+    "sign_test_bh_q": 2.2588541955032094e-126,
+    "tie_fraction": 0.04398148148148148,
+    "ties": 38,
+    "total": 864,
+    "win_fraction": 0.8518518518518519,
+    "wins": 736
+  },
+  {
+    "ci95": [
+      -0.04736564218541359,
+      -0.0423649819470799
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    "environment_mean_difference": -0.044849537037037035,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.044849537037037035,
+    "favorable_direction": "negative",
+    "id": "F_with_A",
+    "loss_fraction": 0.1076388888888889,
+    "losses": 93,
+    "metric": "ser",
+    "non_ties": 826,
+    "p_value": 3.859978438237387e-124,
+    "sign_test_bh_q": 1.1579935314712159e-123,
+    "tie_fraction": 0.04398148148148148,
+    "ties": 38,
+    "total": 864,
+    "win_fraction": 0.8483796296296297,
+    "wins": 733
+  },
+  {
+    "ci95": [
+      -0.06233000578703702,
+      -0.05374285130718959
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    "environment_mean_difference": -0.057972494553376906,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.05797249455337694,
+    "favorable_direction": "negative",
+    "id": "F_with_A",
+    "loss_fraction": 0.13078703703703703,
+    "losses": 113,
+    "metric": "block_error_rate",
+    "non_ties": 686,
+    "p_value": 6.3153277934357045e-75,
+    "sign_test_bh_q": 1.8945983380307114e-74,
+    "tie_fraction": 0.20601851851851852,
+    "ties": 178,
+    "total": 864,
+    "win_fraction": 0.6631944444444444,
+    "wins": 573
+  },
+  {
+    "ci95": [
+      -6.794137895031062,
+      -5.838822303877984
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    "environment_mean_difference": -6.762306409137553,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -6.3074327100152985,
+    "favorable_direction": "negative",
+    "id": "F_with_A",
+    "loss_fraction": 0.13310185185185186,
+    "losses": 115,
+    "metric": "rms_evm_percent",
+    "non_ties": 864,
+    "p_value": 1.1621326146947124e-114,
+    "sign_test_bh_q": 3.486397844084137e-114,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.8668981481481481,
+    "wins": 749
+  },
+  {
+    "ci95": [
+      -0.26057825709331467,
+      0.08957490046164097
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    "environment_mean_difference": 0.5497854494184315,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.09054789758102189,
+    "favorable_direction": "positive",
+    "id": "F_with_A",
+    "loss_fraction": 0.44907407407407407,
+    "losses": 388,
+    "metric": "paired_output_snr_db",
+    "non_ties": 864,
+    "p_value": 0.003056244698102628,
+    "sign_test_bh_q": 0.003056244698102628,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.5509259259259259,
+    "wins": 476
+  },
+  {
+    "ci95": [
+      0.005560404395293085,
+      0.0070662144926294775
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      1,
+      -1,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": 0.0063144041218637995,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": 0.006314404121863806,
+    "favorable_direction": "negative",
+    "id": "interaction",
+    "loss_fraction": 0.6770833333333334,
+    "losses": 585,
+    "metric": "ber",
+    "non_ties": 839,
+    "p_value": 7.606632761994977e-31,
+    "sign_test_bh_q": 9.127959314393972e-31,
+    "tie_fraction": 0.028935185185185185,
+    "ties": 25,
+    "total": 864,
+    "win_fraction": 0.29398148148148145,
+    "wins": 254
+  },
+  {
+    "ci95": [
+      0.008773304628751135,
+      0.011067879912941885
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      1,
+      -1,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": 0.009928556996275215,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": 0.009928556996275206,
+    "favorable_direction": "negative",
+    "id": "interaction",
+    "loss_fraction": 0.6863425925925926,
+    "losses": 593,
+    "metric": "ser",
+    "non_ties": 840,
+    "p_value": 1.3337737441657401e-33,
+    "sign_test_bh_q": 1.600528492998888e-33,
+    "tie_fraction": 0.027777777777777776,
+    "ties": 24,
+    "total": 864,
+    "win_fraction": 0.28587962962962965,
+    "wins": 247
+  },
+  {
+    "ci95": [
+      0.007786756195533651,
+      0.012893178104575135
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      1,
+      -1,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": 0.010297521786492373,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": 0.010297521786492347,
+    "favorable_direction": "negative",
+    "id": "interaction",
+    "loss_fraction": 0.4722222222222222,
+    "losses": 408,
+    "metric": "block_error_rate",
+    "non_ties": 662,
+    "p_value": 2.3329481004618477e-09,
+    "sign_test_bh_q": 2.3329481004618477e-09,
+    "tie_fraction": 0.2337962962962963,
+    "ties": 202,
+    "total": 864,
+    "win_fraction": 0.29398148148148145,
+    "wins": 254
+  },
+  {
+    "ci95": [
+      1.4053994823446583,
+      1.8932010234722283
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      1,
+      -1,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": 1.4142578545453472,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": 1.6490387907035426,
+    "favorable_direction": "negative",
+    "id": "interaction",
+    "loss_fraction": 0.6956018518518519,
+    "losses": 601,
+    "metric": "rms_evm_percent",
+    "non_ties": 864,
+    "p_value": 3.3470419599984205e-31,
+    "sign_test_bh_q": 4.0164503519981045e-31,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.30439814814814814,
+    "wins": 263
+  },
+  {
+    "ci95": [
+      -0.4183403623796507,
+      -0.17353799783299495
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      1,
+      -1,
+      -1,
+      1,
+      0
+    ],
+    "environment_mean_difference": -0.49703067765862674,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.2929763543336712,
+    "favorable_direction": "positive",
+    "id": "interaction",
+    "loss_fraction": 0.7326388888888888,
+    "losses": 633,
+    "metric": "paired_output_snr_db",
+    "non_ties": 864,
+    "p_value": 5.734721770458684e-44,
+    "sign_test_bh_q": 1.7204165311376052e-43,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.2673611111111111,
+    "wins": 231
+  },
+  {
+    "ci95": [
+      -0.004997149719542828,
+      -0.0021447382436397527
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      0,
+      1,
+      -1
+    ],
+    "environment_mean_difference": -0.0035688558577552892,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.003568855857755293,
+    "favorable_direction": "negative",
+    "id": "AF_vs_fixed_scan64",
+    "loss_fraction": 0.3715277777777778,
+    "losses": 321,
+    "metric": "ber",
+    "non_ties": 832,
+    "p_value": 4.690490145623094e-11,
+    "sign_test_bh_q": 4.690490145623094e-11,
+    "tie_fraction": 0.037037037037037035,
+    "ties": 32,
+    "total": 864,
+    "win_fraction": 0.5914351851851852,
+    "wins": 511
+  },
+  {
+    "ci95": [
+      -0.008436246782539198,
+      -0.00411185727651275
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      0,
+      1,
+      -1
+    ],
+    "environment_mean_difference": -0.006275970289549513,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.006275970289549515,
+    "favorable_direction": "negative",
+    "id": "AF_vs_fixed_scan64",
+    "loss_fraction": 0.36689814814814814,
+    "losses": 317,
+    "metric": "ser",
+    "non_ties": 834,
+    "p_value": 4.406561215727291e-12,
+    "sign_test_bh_q": 4.406561215727291e-12,
+    "tie_fraction": 0.034722222222222224,
+    "ties": 30,
+    "total": 864,
+    "win_fraction": 0.5983796296296297,
+    "wins": 517
+  },
+  {
+    "ci95": [
+      -0.030262799564270138,
+      -0.020730996391612185
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      0,
+      1,
+      -1
+    ],
+    "environment_mean_difference": -0.02544594226579521,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -0.02544594226579522,
+    "favorable_direction": "negative",
+    "id": "AF_vs_fixed_scan64",
+    "loss_fraction": 0.28935185185185186,
+    "losses": 250,
+    "metric": "block_error_rate",
+    "non_ties": 732,
+    "p_value": 7.272325150864369e-18,
+    "sign_test_bh_q": 8.726790181037243e-18,
+    "tie_fraction": 0.1527777777777778,
+    "ties": 132,
+    "total": 864,
+    "win_fraction": 0.5578703703703703,
+    "wins": 482
+  },
+  {
+    "ci95": [
+      -1.7729245662317037,
+      -0.8780980650364151
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      0,
+      1,
+      -1
+    ],
+    "environment_mean_difference": -1.5124145970164795,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": -1.3206645067243912,
+    "favorable_direction": "negative",
+    "id": "AF_vs_fixed_scan64",
+    "loss_fraction": 0.36342592592592593,
+    "losses": 314,
+    "metric": "rms_evm_percent",
+    "non_ties": 864,
+    "p_value": 8.6441146915983455e-16,
+    "sign_test_bh_q": 8.6441146915983455e-16,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.6365740740740741,
+    "wins": 550
+  },
+  {
+    "ci95": [
+      0.10652240082119394,
+      0.40727950302313765
+    ],
+    "ci_scope": "paired environment bootstrap; fixed trained model; not retraining uncertainty",
+    "coefficients": [
+      0,
+      0,
+      0,
+      1,
+      -1
+    ],
+    "environment_mean_difference": 0.3909416094020966,
+    "estimand": "environment win/loss probability; not a test of mean difference",
+    "estimate": 0.26036808851604576,
+    "favorable_direction": "positive",
+    "id": "AF_vs_fixed_scan64",
+    "loss_fraction": 0.39467592592592593,
+    "losses": 341,
+    "metric": "paired_output_snr_db",
+    "non_ties": 864,
+    "p_value": 6.409090289724185e-10,
+    "sign_test_bh_q": 7.690908347669022e-10,
+    "tie_fraction": 0.0,
+    "ties": 0,
+    "total": 864,
+    "win_fraction": 0.6053240740740741,
+    "wins": 523
+  }
+]

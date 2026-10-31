@@ -1,0 +1,935 @@
+{
+  "analysis_complete_sha256": "029ae0dc3b21c5291d19b7c7e564a24186bebac393e70c23cf9badd08f9969a8",
+  "source_protocol_sha256": "fca7fd69310bedf7fb3c80388deaa8b726bb06d46564b6d20a0022a380d97ad5",
+  "builder_sha256": "933dc7ca3b989976fc4d278230561990695996e942f137f52bd0812d4aef089b",
+  "methods": [
+    "initial_select64",
+    "codebook",
+    "coordinate",
+    "spsa",
+    "done",
+    "de",
+    "mlp_feedback64",
+    "dnn_feedback64",
+    "cnn_feedback64",
+    "rescnn_feedback64",
+    "transformer_feedback64",
+    "complex_cnn_feedback64",
+    "jct_feedback64",
+    "cnn_warm64"
+  ],
+  "measurements": 64,
+  "environment_index": 0,
+  "cases": [
+    {
+      "carrier_ghz": 4,
+      "environment_id": "test-1053753378",
+      "methods": {
+        "initial_select64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "codebook": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "coordinate": {
+          "ber": 0.016129032258064516,
+          "ser": 0.03225806451612903,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.3610389603350669,
+          "rms_evm_percent": 60.086517650390334,
+          "effective_snr_db": 4.424459301011213,
+          "raw_metrics": {
+            "bit_errors": 8.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.3610389603350669,
+            "symbol_errors": 8.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.17907156141352e-05,
+            "noise_output_power_a2": 1.5597444049273537e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.196505715782845
+        },
+        "spsa": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "done": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "de": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "mlp_feedback64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "dnn_feedback64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "cnn_feedback64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "rescnn_feedback64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "transformer_feedback64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "complex_cnn_feedback64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "jct_feedback64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        },
+        "cnn_warm64": {
+          "ber": 0.018145161290322582,
+          "ser": 0.036290322580645164,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.37294414381693886,
+          "rms_evm_percent": 61.06915291838744,
+          "effective_snr_db": 4.283562079998022,
+          "raw_metrics": {
+            "bit_errors": 9.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.37294414381693886,
+            "symbol_errors": 9.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.164798643387244e-05,
+            "noise_output_power_a2": 1.5516558456126312e-05,
+            "optical_dc_w": 0.0728289117448661
+          },
+          "paired_output_snr_db": 7.211500769356657
+        }
+      }
+    },
+    {
+      "carrier_ghz": 12,
+      "environment_id": "test-1053753378",
+      "methods": {
+        "initial_select64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "codebook": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "coordinate": {
+          "ber": 0.27419354838709675,
+          "ser": 0.4798387096774194,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7468377537281995,
+          "rms_evm_percent": 86.41977515176717,
+          "effective_snr_db": 1.2677373595408594,
+          "raw_metrics": {
+            "bit_errors": 136.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7468377537281995,
+            "symbol_errors": 119.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5262662310814486e-07,
+            "noise_output_power_a2": 3.487180504381398e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.3999531118277733
+        },
+        "spsa": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "done": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "de": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "mlp_feedback64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "dnn_feedback64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "cnn_feedback64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "rescnn_feedback64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "transformer_feedback64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "complex_cnn_feedback64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "jct_feedback64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        },
+        "cnn_warm64": {
+          "ber": 0.2701612903225806,
+          "ser": 0.46774193548387094,
+          "block_error_rate": 1.0,
+          "payload_nmse": 0.7509429555819219,
+          "rms_evm_percent": 86.65696484310547,
+          "effective_snr_db": 1.243930523659199,
+          "raw_metrics": {
+            "bit_errors": 134.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 0.7509429555819219,
+            "symbol_errors": 116.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 2.5831549954133026e-07,
+            "noise_output_power_a2": 3.4686285514216654e-07,
+            "optical_dc_w": 0.07282891183475233
+          },
+          "paired_output_snr_db": -1.280073289421917
+        }
+      }
+    },
+    {
+      "carrier_ghz": 20,
+      "environment_id": "test-1053753378",
+      "methods": {
+        "initial_select64": {
+          "ber": 0.5342741935483871,
+          "ser": 0.7862903225806451,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.301693082338792,
+          "rms_evm_percent": 114.09176492362593,
+          "effective_snr_db": -1.1450859685926593,
+          "raw_metrics": {
+            "bit_errors": 265.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.301693082338792,
+            "symbol_errors": 195.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.539894901303859e-10,
+            "noise_output_power_a2": 2.3857345369669193e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -24.46169591696918
+        },
+        "codebook": {
+          "ber": 0.5201612903225806,
+          "ser": 0.7661290322580645,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.276950718021781,
+          "rms_evm_percent": 113.00224413797193,
+          "effective_snr_db": -1.0617413664932087,
+          "raw_metrics": {
+            "bit_errors": 258.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.276950718021781,
+            "symbol_errors": 190.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 8.997996319505127e-10,
+            "noise_output_power_a2": 2.3731599474948618e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -24.21181198826027
+        },
+        "coordinate": {
+          "ber": 0.4778225806451613,
+          "ser": 0.7217741935483871,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.2345293279934433,
+          "rms_evm_percent": 111.10937530170185,
+          "effective_snr_db": -0.9150141167129165,
+          "raw_metrics": {
+            "bit_errors": 237.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.2345293279934433,
+            "symbol_errors": 179.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.0915572137477741e-08,
+            "noise_output_power_a2": 2.3703015881399955e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -13.367571034023706
+        },
+        "spsa": {
+          "ber": 0.4959677419354839,
+          "ser": 0.7298387096774194,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.2390341227975323,
+          "rms_evm_percent": 111.31190964122088,
+          "effective_snr_db": -0.9308326693991527,
+          "raw_metrics": {
+            "bit_errors": 246.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.2390341227975323,
+            "symbol_errors": 181.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 7.642314690133004e-10,
+            "noise_output_power_a2": 1.3100837355981054e-07,
+            "optical_dc_w": 0.04081036403008237
+          },
+          "paired_output_snr_db": -22.34074138194975
+        },
+        "done": {
+          "ber": 0.5080645161290323,
+          "ser": 0.7701612903225806,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.2704087180968329,
+          "rms_evm_percent": 112.71240917027872,
+          "effective_snr_db": -1.0394346541075707,
+          "raw_metrics": {
+            "bit_errors": 252.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.2704087180968329,
+            "symbol_errors": 191.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 7.425580763095005e-10,
+            "noise_output_power_a2": 1.7204741275048116e-07,
+            "optical_dc_w": 0.05302124661997526
+          },
+          "paired_output_snr_db": -23.649177201026134
+        },
+        "de": {
+          "ber": 0.49798387096774194,
+          "ser": 0.7661290322580645,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.2490505122335849,
+          "rms_evm_percent": 111.7609284246326,
+          "effective_snr_db": -0.965800018174767,
+          "raw_metrics": {
+            "bit_errors": 247.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.2490505122335849,
+            "symbol_errors": 190.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.043463492372209e-09,
+            "noise_output_power_a2": 2.3827288682942145e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -23.585973675902913
+        },
+        "mlp_feedback64": {
+          "ber": 0.5282258064516129,
+          "ser": 0.7983870967741935,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.263869257855153,
+          "rms_evm_percent": 112.42193993412286,
+          "effective_snr_db": -1.0170215026850313,
+          "raw_metrics": {
+            "bit_errors": 262.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.263869257855153,
+            "symbol_errors": 198.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.4124202097814455e-09,
+            "noise_output_power_a2": 2.3833044772314355e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -22.272156057591182
+        },
+        "dnn_feedback64": {
+          "ber": 0.5282258064516129,
+          "ser": 0.7983870967741935,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.263869257855153,
+          "rms_evm_percent": 112.42193993412286,
+          "effective_snr_db": -1.0170215026850313,
+          "raw_metrics": {
+            "bit_errors": 262.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.263869257855153,
+            "symbol_errors": 198.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.4124202097814455e-09,
+            "noise_output_power_a2": 2.3833044772314355e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -22.272156057591182
+        },
+        "cnn_feedback64": {
+          "ber": 0.5282258064516129,
+          "ser": 0.7983870967741935,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.263869257855153,
+          "rms_evm_percent": 112.42193993412286,
+          "effective_snr_db": -1.0170215026850313,
+          "raw_metrics": {
+            "bit_errors": 262.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.263869257855153,
+            "symbol_errors": 198.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.4124202097814455e-09,
+            "noise_output_power_a2": 2.3833044772314355e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -22.272156057591182
+        },
+        "rescnn_feedback64": {
+          "ber": 0.5282258064516129,
+          "ser": 0.7983870967741935,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.263869257855153,
+          "rms_evm_percent": 112.42193993412286,
+          "effective_snr_db": -1.0170215026850313,
+          "raw_metrics": {
+            "bit_errors": 262.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.263869257855153,
+            "symbol_errors": 198.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.4124202097814455e-09,
+            "noise_output_power_a2": 2.3833044772314355e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -22.272156057591182
+        },
+        "transformer_feedback64": {
+          "ber": 0.5282258064516129,
+          "ser": 0.7983870967741935,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.263869257855153,
+          "rms_evm_percent": 112.42193993412286,
+          "effective_snr_db": -1.0170215026850313,
+          "raw_metrics": {
+            "bit_errors": 262.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.263869257855153,
+            "symbol_errors": 198.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.4124202097814455e-09,
+            "noise_output_power_a2": 2.3833044772314355e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -22.272156057591182
+        },
+        "complex_cnn_feedback64": {
+          "ber": 0.5282258064516129,
+          "ser": 0.7983870967741935,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.263869257855153,
+          "rms_evm_percent": 112.42193993412286,
+          "effective_snr_db": -1.0170215026850313,
+          "raw_metrics": {
+            "bit_errors": 262.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.263869257855153,
+            "symbol_errors": 198.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.4124202097814455e-09,
+            "noise_output_power_a2": 2.3833044772314355e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -22.272156057591182
+        },
+        "jct_feedback64": {
+          "ber": 0.5282258064516129,
+          "ser": 0.7983870967741935,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.263869257855153,
+          "rms_evm_percent": 112.42193993412286,
+          "effective_snr_db": -1.0170215026850313,
+          "raw_metrics": {
+            "bit_errors": 262.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.263869257855153,
+            "symbol_errors": 198.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.4124202097814455e-09,
+            "noise_output_power_a2": 2.3833044772314355e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -22.272156057591182
+        },
+        "cnn_warm64": {
+          "ber": 0.5282258064516129,
+          "ser": 0.7983870967741935,
+          "block_error_rate": 1.0,
+          "payload_nmse": 1.263869257855153,
+          "rms_evm_percent": 112.42193993412286,
+          "effective_snr_db": -1.0170215026850313,
+          "raw_metrics": {
+            "bit_errors": 262.0,
+            "bits_tested": 496.0,
+            "payload_nmse": 1.263869257855153,
+            "symbol_errors": 198.0,
+            "symbols_tested": 248.0,
+            "block_errors": 8.0,
+            "blocks_tested": 8.0,
+            "clean_output_power_a2": 1.4124202097814455e-09,
+            "noise_output_power_a2": 2.3833044772314355e-07,
+            "optical_dc_w": 0.07282891209732044
+          },
+          "paired_output_snr_db": -22.272156057591182
+        }
+      }
+    }
+  ],
+  "controls_reoptimized": false,
+  "figures": {
+    "rq1_quality_profiles_all13_64.pdf": "02be47e6be3bda5774bd013d61c3e17003d301fb1eb1e36d235adf35956a218e",
+    "rq1_paired_all13_64.pdf": "79c41fb6a286241875e0a3c4da73ea4563a2378838b803324c423c067ad1f555",
+    "rq1_metric_relations_all13_64.pdf": "ac47d4bcc85beef478d92a92eafd82d9a84c539a10e3c158ae78ee8ca96bedc0",
+    "rq1_selection_origins_64.pdf": "59ef9e6571b1e1021a989abe00f7ccb0c23b0891ded1ee9c3f026e34f5409507",
+    "rq1_constellation_all13_04_64.pdf": "9f1f8426ee7a615809701e9ddb30ba7adbcd80fb2f9a04a03c9c24d01d7e7ac9",
+    "rq1_constellation_all13_12_64.pdf": "fce73e523385403234f971c6c8dea396ca9fe6f093e6932ae6bc13f14e69eb57",
+    "rq1_constellation_all13_20_64.pdf": "bc217606819c69563cd1fc401d7a64cfb4920690ea4155e6900a85b510f5c314"
+  }
+}

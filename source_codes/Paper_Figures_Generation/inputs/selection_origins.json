@@ -1,0 +1,58 @@
+{
+  "mlp_feedback64": {
+    "initial": 3188,
+    "model": 51,
+    "codebook": 11449,
+    "model_newly_measured": 14688,
+    "total": 14688
+  },
+  "dnn_feedback64": {
+    "initial": 3188,
+    "model": 54,
+    "codebook": 11446,
+    "model_newly_measured": 14688,
+    "total": 14688
+  },
+  "cnn_feedback64": {
+    "initial": 3190,
+    "model": 43,
+    "codebook": 11455,
+    "model_newly_measured": 14688,
+    "total": 14688
+  },
+  "rescnn_feedback64": {
+    "initial": 3185,
+    "model": 45,
+    "codebook": 11458,
+    "model_newly_measured": 14688,
+    "total": 14688
+  },
+  "transformer_feedback64": {
+    "initial": 3185,
+    "model": 51,
+    "codebook": 11452,
+    "model_newly_measured": 14688,
+    "total": 14688
+  },
+  "complex_cnn_feedback64": {
+    "initial": 3188,
+    "model": 53,
+    "codebook": 11447,
+    "model_newly_measured": 14688,
+    "total": 14688
+  },
+  "jct_feedback64": {
+    "initial": 3183,
+    "model": 45,
+    "codebook": 11460,
+    "model_newly_measured": 14688,
+    "total": 14688
+  },
+  "cnn_warm64": {
+    "initial": 1232,
+    "model": 4905,
+    "codebook": 8551,
+    "model_newly_measured": 14688,
+    "total": 14688
+  }
+}

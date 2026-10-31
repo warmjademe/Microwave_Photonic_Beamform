@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-31",
+  "scope": "Source cleanup and figure-package publication; no numerical experiment rerun",
+  "published_scientific_python_unchanged": 264,
+  "obsolete_local_scripts_removed": 15,
+  "obsolete_published_scripts_removed": 14,
+  "released_raw_paths_removed": 0,
+  "release_manifest_and_indices_unchanged": true,
+  "public_release_parts_verified": 193,
+  "data_groups": 10,
+  "plot_inputs_sha256_checked": 19,
+  "generated_single_figure_pdfs": 16,
+  "generated_eight_page_collections": 2,
+  "input_corruption_rejected": true,
+  "figure_data_checks": [
+    "RQ1 aggregate and carrier metrics match frozen summaries",
+    "RQ2 RLF BER matches RQ1",
+    "Selected-control origins each sum to 14688",
+    "Constellation received symbols and metrics use unchanged case data",
+    "Array response at diagnostic steering points matches stored values"
+  ],
+  "visual_checks": "Eight plots per language reviewed; PDF/PNG labels and legends checked"
+}

@@ -1,0 +1,199 @@
+{
+  "status": "generated_and_numeric_checks_passed",
+  "at": "2026-10-31T01:58:05.063319+00:00",
+  "python": "3.9.6",
+  "numpy": "1.26.4",
+  "matplotlib": "3.9.4",
+  "script_sha256": "135af326fcb9407688d9686a971054e3d851336a14b2af3320d73e4943513300",
+  "input_manifest_sha256": "bfdacbc7bf1d0537a4b27769819a71067f0d62857ac4397c9772529b44236e7c",
+  "font_sha256": "4afa97aa8751e0118617df88272b58d43691b5cffb7ea024c4580496e9f34d28",
+  "new_training_or_receiver_evaluation": false,
+  "figures": [
+    {
+      "language": "en",
+      "figure": "rq1_metric_relations_all13_64",
+      "source_inputs": [
+        "rq1_metrics.npz"
+      ],
+      "pdf_sha256": "0de06a16eeaf49bc29edc48bda18e0d698a18786681997d6ca793e2cb523c287"
+    },
+    {
+      "language": "en",
+      "figure": "rq1_quality_profiles_all13_64",
+      "source_inputs": [
+        "rq1_groups.json"
+      ],
+      "pdf_sha256": "bd6ee1cbc1a44d38cc2140fb93297c57dcd8d1b51ac2499fd5c07a776ee59c61"
+    },
+    {
+      "language": "en",
+      "figure": "array_ttd_phase",
+      "source_inputs": [
+        "array_response.npz",
+        "array_geometry.json"
+      ],
+      "pdf_sha256": "d069bc2750e248a48bfddca85d3a93ff40adc808d26c0601ed6e2dec29080a13"
+    },
+    {
+      "language": "en",
+      "figure": "rq1_selection_origins_64",
+      "source_inputs": [
+        "selection_origins.json"
+      ],
+      "pdf_sha256": "a4d2735189f7c807f69e42e11ad5c26418b47baba38c9d0ce5144611eb341c52"
+    },
+    {
+      "language": "en",
+      "figure": "rq1_constellation_all13_12_64",
+      "source_inputs": [
+        "constellation.npz",
+        "constellation_manifest.json"
+      ],
+      "pdf_sha256": "a6bcd12caec3e93f3b8a8cd4bf7feab4633da3d6fb14ce37bdf10e6cecec8ecc"
+    },
+    {
+      "language": "en",
+      "figure": "rq1_sensitivity",
+      "source_inputs": [
+        "sensitivity_summary.json",
+        "sensitivity_comparisons.json"
+      ],
+      "pdf_sha256": "a3d97b59f171ec5520b458314de9149d63e6a90b150770a470c2f02fe8546b31"
+    },
+    {
+      "language": "en",
+      "figure": "rq2_af_ablation",
+      "source_inputs": [
+        "ablation_summary.json",
+        "ablation_comparisons.json"
+      ],
+      "pdf_sha256": "6132a511f1315afe7800d64ddab0428eb2c005b590fc5a1be224d5b2c3e3fe8a"
+    },
+    {
+      "language": "en",
+      "figure": "rq3_training_quality",
+      "source_inputs": [
+        "training_curves.json"
+      ],
+      "pdf_sha256": "f49c6a0ec5aa80a255ff5dc90554976bc9e3ee714ef0ca34a4d3f4e97a0274c4"
+    },
+    {
+      "language": "zh",
+      "figure": "rq1_metric_relations_all13_64",
+      "source_inputs": [
+        "rq1_metrics.npz"
+      ],
+      "pdf_sha256": "c6a2914dab949a6638c72900d9fb4d0d96d9238bed4717cc18e7aae96c656541"
+    },
+    {
+      "language": "zh",
+      "figure": "rq1_quality_profiles_all13_64",
+      "source_inputs": [
+        "rq1_groups.json"
+      ],
+      "pdf_sha256": "201c07271ac25650b8575c693ff2b95576b25d5adb6081fb9e2839b6e14a6efc"
+    },
+    {
+      "language": "zh",
+      "figure": "array_ttd_phase",
+      "source_inputs": [
+        "array_response.npz",
+        "array_geometry.json"
+      ],
+      "pdf_sha256": "de33c84ca2e2b4c55654cb8d94ac1c6a5db3ce61c4013ff8bbe1527ce1c22219"
+    },
+    {
+      "language": "zh",
+      "figure": "rq1_selection_origins_64",
+      "source_inputs": [
+        "selection_origins.json"
+      ],
+      "pdf_sha256": "29353dc5bd23a7327e70a50049580865954bd52dedbb40026126f45b1c163f98"
+    },
+    {
+      "language": "zh",
+      "figure": "rq1_constellation_all13_12_64",
+      "source_inputs": [
+        "constellation.npz",
+        "constellation_manifest.json"
+      ],
+      "pdf_sha256": "49b84f621f42fafc97b4dbaa9f1712033749c7ad521d88c0567a5850d19b3e33"
+    },
+    {
+      "language": "zh",
+      "figure": "rq1_sensitivity",
+      "source_inputs": [
+        "sensitivity_summary.json",
+        "sensitivity_comparisons.json"
+      ],
+      "pdf_sha256": "c9ab07f6610c0a8151bafcc083be368558c22e73f0b4d4dd986c4d63e5c9277d"
+    },
+    {
+      "language": "zh",
+      "figure": "rq2_af_ablation",
+      "source_inputs": [
+        "ablation_summary.json",
+        "ablation_comparisons.json"
+      ],
+      "pdf_sha256": "a09a336674c142db0b469ad2e0a5719113a155be7fb1441928d300eae23d034c"
+    },
+    {
+      "language": "zh",
+      "figure": "rq3_training_quality",
+      "source_inputs": [
+        "training_curves.json"
+      ],
+      "pdf_sha256": "861de1d5d75c20834b0a23369c6798d34ca48ca1d54eb9cf5b23616e538a7188"
+    }
+  ],
+  "figure_registry": [
+    {
+      "number": 3,
+      "stem": "rq1_metric_relations_all13_64",
+      "label": "fig:metric-relations",
+      "description": "BER、EVM 与 SNR 的关系"
+    },
+    {
+      "number": 4,
+      "stem": "rq1_quality_profiles_all13_64",
+      "label": "fig:frequency",
+      "description": "载频与接收功率分组"
+    },
+    {
+      "number": 5,
+      "stem": "array_ttd_phase",
+      "label": "fig:array-phase",
+      "description": "固定阵列的真时延与相移方向图"
+    },
+    {
+      "number": 6,
+      "stem": "rq1_selection_origins_64",
+      "label": "fig:selection-origins",
+      "description": "最终控制的选择来源"
+    },
+    {
+      "number": 7,
+      "stem": "rq1_constellation_all13_12_64",
+      "label": "fig:rq1-constellation",
+      "description": "相同输入的 QPSK 星座"
+    },
+    {
+      "number": 8,
+      "stem": "rq1_sensitivity",
+      "label": "fig:rq1-sensitivity",
+      "description": "传播和接收扰动的敏感性"
+    },
+    {
+      "number": 9,
+      "stem": "rq2_af_ablation",
+      "label": "fig:rq2-af",
+      "description": "CRL 与 CFS 的消融"
+    },
+    {
+      "number": 10,
+      "stem": "rq3_training_quality",
+      "label": "fig:rq3-training",
+      "description": "训练规模与更新次数"
+    }
+  ]
+}

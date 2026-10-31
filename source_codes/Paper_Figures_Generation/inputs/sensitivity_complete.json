@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-29T22:48:54.685705+00:00",
+  "file_sha256": {
+    "REPORT_zh.md": "1037cc392b42f6ba48f82b35f7a0c8e9dd25abb325c9e4ced37c9bcfb21d883e",
+    "comparisons.json": "ea871075ed6ba05321636e1d3537ed0c6d49415c4337cbecf741f82166eb3617",
+    "power_groups.json": "4efaf05088e17c3d51e4fd8904b16e0a3c612655acfa2ed6efaa0667c90af4c8",
+    "protocol.json": "129a3cdd8857062613ba640a4fd26df23a17ba4f29a8b553041a06a8eef61fdd",
+    "summary.json": "a4b3abd68e0906212cb566e7fc58235da83ad7f8eec3d490eda73f203af7d454"
+  },
+  "raw_records_verified": 161568,
+  "status": "complete"
+}

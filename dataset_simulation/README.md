@@ -24,7 +24,7 @@ Always read each archive's `protocol.json` for method names, metric order, and p
 
 ## Models and result records
 
-The frozen runtime bundle is `baseline_results/20260925_full_baselines/fair_3456/runtime_bundle/`. Component A uses the model from `scale_3456/response_n3456_fixed_epochs/`. Component B uses fitted statistics from `diagnostics/20260926_joint_refinement_train3456/` and `diagnostics/20260926_measurement_refinement_fit_3456/`.
+The frozen runtime bundle is `baseline_results/20260925_full_baselines/fair_3456/runtime_bundle/`. Component CRL uses the model from `scale_3456/response_n3456_fixed_epochs/`. Component B uses fitted statistics from `diagnostics/20260926_joint_refinement_train3456/` and `diagnostics/20260926_measurement_refinement_fit_3456/`.
 
 The base and extended test records together cover 29 configurations and **425,952 method–condition evaluations**. These include two probe budgets, necessary ablations, and the privileged teacher/digital MRC references. They are not 29 distinct baselines. The paper's main comparison uses 13 baselines plus the proposed method, each with 64 probes.
 
@@ -43,3 +43,9 @@ python3 source_codes/release_tools/fetch_artifacts.py --verify-only
 [Release `data-2026-10-01`](https://github.com/warmjademe/Microwave_Photonic_Beamform/releases/tag/data-2026-10-01) provides the complete manifest. Unchanged base assets remain in `data-2026-09-26`; the downloader resolves both releases automatically. The full download is approximately 7.87 GiB, with additional disk space needed for extraction and cached archives.
 
 [RELEASE_DATA.json](RELEASE_DATA.json) records asset locations, sizes, and SHA-256 digests. Compressed indices in `release_indices/` identify every restored file. Downloads preserve the original relative paths and required model-bundle hardlinks. Simulator installers and license materials are not part of the research dataset.
+
+## Current plotting inputs and cleanup
+
+[Paper_Figures_Generation](../source_codes/Paper_Figures_Generation/README.md) bundles the smaller, checked subset needed to reproduce Figures 3–10. It uses RLF/CRL/CFS labels and the existing input cases and statistics. Full raw data continue to use the release download manifest above.
+
+The [31 October cleanup record](CLEANUP_20261031.md) distinguishes removed duplicate upload/download files from retained experiment records. No released raw-record path or value is removed by that cleanup.

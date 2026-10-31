@@ -1,0 +1,255 @@
+{
+  "at": "2026-10-30T01:38:21.594951+00:00",
+  "protocol": {
+    "study": "Deterministic array-factor diagnostic for reviewer 4.4",
+    "fixed_before_execution": true,
+    "purpose": "Quantify spatial aliases and the isolated effect of frequency-dependent delay in the existing 100 MHz band, without claiming a comparison between complete hardware receivers.",
+    "execution_host": "remote research server only",
+    "carriers_ghz": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "steering_azimuth": {
+      "minimum_deg": -35,
+      "maximum_deg": 35,
+      "count": 41
+    },
+    "steering_elevation": {
+      "minimum_deg": -15,
+      "maximum_deg": 15,
+      "count": 21
+    },
+    "offsets": "31 active OFDM offsets plus the two nominal band edges -50 and +50 MHz",
+    "controls": "Same quantized geometric delay codes in both models. True delay contributes exp(-j2pi f tau); the matched phase reference contributes exp(-j2pi fc tau). Equal amplitudes, same 64-element positions, no optimisation or learning.",
+    "normalization": "Squared array-factor magnitude divided by 64 squared. Report 10log10 gains and TTD-minus-phase differences in dB at the prescribed steering direction.",
+    "pattern_plot": {
+      "carriers_ghz": [
+        4,
+        12,
+        20
+      ],
+      "steering_azimuth_deg": [
+        0,
+        35
+      ],
+      "elevation_deg": 0,
+      "look_azimuth_count": 3601,
+      "look_azimuth_limits_deg": [
+        -90,
+        90
+      ],
+      "offsets_mhz": [
+        0,
+        50
+      ]
+    },
+    "scope": "Isotropic planar-wave array calculation. Excludes multipath, DML transfer, detector noise, insertion-loss differences between hardware technologies and coding. No new BER result, no model training, no test-set-based selection.",
+    "checks": [
+      "Exact equality of matched models at each centre frequency",
+      "Unity normalised broadside gain with zero delays",
+      "Unity broadside grating-lobe replicas at the analytically predicted 20 GHz azimuths",
+      "All delay codes lie within the existing 0..76 grid",
+      "Finite results for every predefined condition"
+    ],
+    "reporting": "Retain all deterministic grid results, including cases where the matched phase reference has greater directional gain. No statistical significance test for a deterministic enumeration. No change to existing simulator or receiver scores."
+  },
+  "steering_count": 861,
+  "carrier_count": 17,
+  "offset_count": 33,
+  "paired_conditions": 483021,
+  "maximum_used_delay_ps": 703.125,
+  "prescribed_control_range_max_phase_difference_deg": 26.71875,
+  "steering_grid_max_phase_difference_deg": 12.65625,
+  "global_extreme": {
+    "absolute_difference_db": 0.15740326507680402,
+    "signed_ttd_minus_phase_db": 0.15740326507680402,
+    "carrier_ghz": 20.0,
+    "steering_deg": [
+      -29.75,
+      -9.0
+    ],
+    "offset_mhz": -50.0
+  },
+  "per_carrier": [
+    {
+      "carrier_ghz": 4.0,
+      "minimum_difference_db": -0.018571572654872373,
+      "median_difference_db": 0.0006615557614480794,
+      "maximum_difference_db": 0.03450977323854293,
+      "mean_difference_db": 0.0017715961903211393,
+      "maximum_absolute_difference_db": 0.03450977323854293
+    },
+    {
+      "carrier_ghz": 5.0,
+      "minimum_difference_db": -0.024260291578460436,
+      "median_difference_db": 0.0006388226187166723,
+      "maximum_difference_db": 0.04094270189567649,
+      "mean_difference_db": 0.0017723115585325027,
+      "maximum_absolute_difference_db": 0.04094270189567649
+    },
+    {
+      "carrier_ghz": 6.0,
+      "minimum_difference_db": -0.030016257161773974,
+      "median_difference_db": 0.0006281480213936042,
+      "maximum_difference_db": 0.04745593558584296,
+      "mean_difference_db": 0.0017731901195361484,
+      "maximum_absolute_difference_db": 0.04745593558584296
+    },
+    {
+      "carrier_ghz": 7.0,
+      "minimum_difference_db": -0.035855169443482215,
+      "median_difference_db": 0.0006205568531397199,
+      "maximum_difference_db": 0.054064585921809655,
+      "mean_difference_db": 0.0017742344271118047,
+      "maximum_absolute_difference_db": 0.054064585921809655
+    },
+    {
+      "carrier_ghz": 8.0,
+      "minimum_difference_db": -0.04179345357538261,
+      "median_difference_db": 0.0006047730183083577,
+      "maximum_difference_db": 0.060784425703377776,
+      "mean_difference_db": 0.0017754475166200485,
+      "maximum_absolute_difference_db": 0.060784425703377776
+    },
+    {
+      "carrier_ghz": 9.0,
+      "minimum_difference_db": -0.04812038294986942,
+      "median_difference_db": 0.0005862930442566139,
+      "maximum_difference_db": 0.06763201233129718,
+      "mean_difference_db": 0.0017768329118635915,
+      "maximum_absolute_difference_db": 0.06763201233129718
+    },
+    {
+      "carrier_ghz": 10.0,
+      "minimum_difference_db": -0.05488648760927328,
+      "median_difference_db": 0.0005706166466114375,
+      "maximum_difference_db": 0.07462482278538052,
+      "mean_difference_db": 0.001778394631464767,
+      "maximum_absolute_difference_db": 0.07462482278538052
+    },
+    {
+      "carrier_ghz": 11.0,
+      "minimum_difference_db": -0.06178740872898014,
+      "median_difference_db": 0.0005569991609210012,
+      "maximum_difference_db": 0.08178140249406074,
+      "mean_difference_db": 0.0017801371939248558,
+      "maximum_absolute_difference_db": 0.08178140249406074
+    },
+    {
+      "carrier_ghz": 12.0,
+      "minimum_difference_db": -0.06884122437583362,
+      "median_difference_db": 0.0005269066108788412,
+      "maximum_difference_db": 0.08912153078855045,
+      "mean_difference_db": 0.0017820656202853931,
+      "maximum_absolute_difference_db": 0.08912153078855045
+    },
+    {
+      "carrier_ghz": 13.0,
+      "minimum_difference_db": -0.07606717808049179,
+      "median_difference_db": 0.0005042486779738287,
+      "maximum_difference_db": 0.09666640608581589,
+      "mean_difference_db": 0.0017841854330519242,
+      "maximum_absolute_difference_db": 0.09666640608581589
+    },
+    {
+      "carrier_ghz": 14.0,
+      "minimum_difference_db": -0.08348585652092166,
+      "median_difference_db": 0.0004823850463107071,
+      "maximum_difference_db": 0.10443885449999857,
+      "mean_difference_db": 0.0017865026497287015,
+      "maximum_absolute_difference_db": 0.10443885449999857
+    },
+    {
+      "carrier_ghz": 15.0,
+      "minimum_difference_db": -0.09111938926265739,
+      "median_difference_db": 0.00047949473913377894,
+      "maximum_difference_db": 0.11246356626625476,
+      "mean_difference_db": 0.0017890237690258264,
+      "maximum_absolute_difference_db": 0.11246356626625476
+    },
+    {
+      "carrier_ghz": 16.0,
+      "minimum_difference_db": -0.09899167468970504,
+      "median_difference_db": 0.00046781170017373697,
+      "maximum_difference_db": 0.12076736520620379,
+      "mean_difference_db": 0.0017917557475482446,
+      "maximum_absolute_difference_db": 0.12076736520620379
+    },
+    {
+      "carrier_ghz": 17.0,
+      "minimum_difference_db": -0.10712863704666975,
+      "median_difference_db": 0.000460025477691417,
+      "maximum_difference_db": 0.12937951751016485,
+      "mean_difference_db": 0.0017947059647472254,
+      "maximum_absolute_difference_db": 0.12937951751016485
+    },
+    {
+      "carrier_ghz": 18.0,
+      "minimum_difference_db": -0.11555852048538795,
+      "median_difference_db": 0.0004437067664757599,
+      "maximum_difference_db": 0.13833208741192093,
+      "mean_difference_db": 0.0017978821742934128,
+      "maximum_absolute_difference_db": 0.13833208741192093
+    },
+    {
+      "carrier_ghz": 19.0,
+      "minimum_difference_db": -0.1243122272174928,
+      "median_difference_db": 0.0004247738046085914,
+      "maximum_difference_db": 0.1476603489539967,
+      "mean_difference_db": 0.0018012924412469107,
+      "maximum_absolute_difference_db": 0.1476603489539967
+    },
+    {
+      "carrier_ghz": 20.0,
+      "minimum_difference_db": -0.13342370837900996,
+      "median_difference_db": 0.0004154272910303902,
+      "maximum_difference_db": 0.15740326507680402,
+      "mean_difference_db": 0.0018049450672199619,
+      "maximum_absolute_difference_db": 0.15740326507680402
+    }
+  ],
+  "aliases": [
+    {
+      "carrier_ghz": 4.0,
+      "broadside_azimuth_replica_deg": []
+    },
+    {
+      "carrier_ghz": 12.0,
+      "broadside_azimuth_replica_deg": [
+        -41.810314895778596,
+        41.810314895778596
+      ]
+    },
+    {
+      "carrier_ghz": 20.0,
+      "broadside_azimuth_replica_deg": [
+        -53.13010235415599,
+        -23.578178478201835,
+        23.578178478201835,
+        53.13010235415599
+      ]
+    }
+  ],
+  "checks": "all passed",
+  "source_sha256": {
+    "source_codes/revision_scope_20261030/array_diagnostic.py": "e05665857e9d886be8cdb0d750fec5929675f79e943b47e0902075e7f7809d8a",
+    "source_codes/revision_scope_20261030/protocol.json": "14d9aa2b5a47db16de52296bc93228616559aaa3ff170991096d84f4ab503026",
+    "source_codes/native_sim/config.py": "2019d59fb778fc7bf18fe8170deb93738fa77531b1ba3a39722432906d8bc384",
+    "source_codes/baseline_common/controls.py": "e724edf047a2f88e39863903bc50b29e39ac48df7b336551d9c1387f5cc8de6e"
+  }
+}

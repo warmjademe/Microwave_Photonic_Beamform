@@ -1,6 +1,6 @@
 # Complex response learning and candidate feedback: revision experiments
 
-These source files accompany the revised A/F formulation. The main method remains the frozen `cnn_warm64` controller; these experiments do not change its weights, solver, or measured-score selection rule.
+These source files accompany the revised CRL/CFS formulation. The main method remains the frozen `cnn_warm64` controller; these experiments do not change its weights, solver, or measured-score selection rule.
 
 | Study | Evaluation / analysis | Protocol |
 |---|---|---|
@@ -14,9 +14,9 @@ These source files accompany the revised A/F formulation. The main method remain
 | Software timing and full-call analysis | `benchmark_af.py`, `summarize_timing.py` | `P_TIMING_PROTOCOL.md` |
 | Single-controller process and GPU memory | `profile_memory.py` | `P_MEMORY_PROTOCOL.md` |
 
-`render_ablation.py` and `render_sensitivity.py` draw only checksum-bound completed analyses. Queue scripts coordinate the original execution and preserve failure states; they do not make incomplete jobs into completed evidence. The original protocols are retained byte-for-byte for provenance, including their Chinese descriptions.
+`render_ablation.py` and `render_sensitivity.py` draw only checksum-bound completed analyses. Obsolete queue scripts have been removed; direct experiment and analysis entry points and their failure records are retained. The original protocols are retained byte-for-byte for provenance, including their Chinese descriptions.
 
-The A/F factorial study is in `../study_rq2_af_20261029/`. A is implemented by `../our_method_response_control/model.py`, the shared discrete solver by that module's `physics.py::decode`, and F by `../study_uniform64/controllers.py::Feedback64`. Historical joint correction B is not a component of A/F.
+The CRL/CFS factorial study is in `../study_rq2_af_20261029/`. CRL is implemented by `../our_method_response_control/model.py`, the shared discrete solver by that module's `physics.py::decode`, and CFS by `../study_uniform64/controllers.py::Feedback64`. Historical joint correction B is not a component of CRL/CFS.
 
 The data roots and download groups are documented in [the paper-to-artifact guide](../../dataset_simulation/PAPER_ARTIFACTS.md). Training uses 3,456 environments; the H study uses 216 validation environments; test comparisons use the existing 864 test environments and all 17 carriers. The sensitivity study transforms the same environments rather than introducing a new independent holdout. All configurations and unfavourable results are retained.
 

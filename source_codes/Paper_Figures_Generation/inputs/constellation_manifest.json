@@ -1,0 +1,236 @@
+{
+  "status": "passed",
+  "created_at": "2026-09-27T10:26:13.895891+00:00",
+  "methods": [
+    "initial_select64",
+    "codebook",
+    "coordinate",
+    "spsa",
+    "done",
+    "de",
+    "mlp_feedback64",
+    "dnn_feedback64",
+    "cnn_feedback64",
+    "rescnn_feedback64",
+    "transformer_feedback64",
+    "complex_cnn_feedback64",
+    "jct_feedback64",
+    "cnn_warm64"
+  ],
+  "case": {
+    "environment_id": "test-0952625477",
+    "factors": {
+      "angular_std_deg": 3.0,
+      "max_delay_ns": 200.0,
+      "power_bin": 3.0,
+      "rays": 8.0
+    },
+    "index": 363,
+    "joint_stratum_id": "L8_T200_A3_P3",
+    "path": "test/environment_00363",
+    "seed": 952625477,
+    "split": "test",
+    "stratum_repeat_index": 2
+  },
+  "carrier_ghz": 12,
+  "environment": {
+    "actual_max_delay_ns": 190.12582371846233,
+    "alpha": {
+      "imag": [
+        0.09594281077873765,
+        0.09579582696090613,
+        0.4237982652662044,
+        0.10166768685927217,
+        0.2585743857803436,
+        0.16155931437579374,
+        0.09230454541730719,
+        -0.0500675750425687
+      ],
+      "real": [
+        0.31407941208946516,
+        -0.147781908408243,
+        -0.08588511306874676,
+        0.4219952279417186,
+        0.018042003736344663,
+        0.04739536095773574,
+        -0.02992620430367832,
+        -0.05190012314984315
+      ]
+    },
+    "angles_deg": [
+      [
+        -18.342180155109286,
+        2.4448996065228963
+      ],
+      [
+        -16.83037398599486,
+        4.129053986365561
+      ],
+      [
+        -7.099833679211456,
+        4.120830103529934
+      ],
+      [
+        -14.848286801665118,
+        3.1456346589333015
+      ],
+      [
+        -13.066147125388257,
+        2.815960835842503
+      ],
+      [
+        -11.831206645555493,
+        2.181930236913405
+      ],
+      [
+        -14.933015033046123,
+        4.079083151829195
+      ],
+      [
+        -14.348057675773,
+        6.084657279069419
+      ]
+    ],
+    "delays_s": [
+      0.0,
+      2.7238379101670106e-08,
+      4.246955355411877e-08,
+      6.431728741069932e-08,
+      1.5534985895573818e-07,
+      1.7314277341151494e-07,
+      1.886770579039921e-07,
+      1.9012582371846233e-07
+    ],
+    "doppler_hz": 0.0,
+    "factors": {
+      "angular_std_deg": 3.0,
+      "max_delay_ns": 200.0,
+      "power_bin": 3.0,
+      "rays": 8.0
+    },
+    "interference": false,
+    "mean_az_deg": -14.198727360120568,
+    "mean_el_deg": 3.0801512201703645,
+    "pdp": [
+      0.3492813353526959,
+      0.23213103759280515,
+      0.18471875269986782,
+      0.13310235314773908,
+      0.03397516551230801,
+      0.026016634314609773,
+      0.020608875806485846,
+      0.020165845573488574
+    ],
+    "pdp_rms_delay_ns": 49.99740131287864,
+    "power_dbm": -89.92234003855384,
+    "realized_rms_delay_ns": 52.12211392533845,
+    "reference_hz": 4000000000.0,
+    "seed": 952625477,
+    "shadow_std_db": 0.0
+  },
+  "selection": {
+    "row": {
+      "environment_id": "test-0952625477",
+      "factors": {
+        "angular_std_deg": 3.0,
+        "max_delay_ns": 200.0,
+        "power_bin": 3.0,
+        "rays": 8.0
+      },
+      "index": 363,
+      "joint_stratum_id": "L8_T200_A3_P3",
+      "path": "test/environment_00363",
+      "seed": 952625477,
+      "split": "test",
+      "stratum_repeat_index": 2
+    },
+    "relative_evm_reduction": 0.10194504445985175,
+    "minimum_baseline_evm_percent": 43.2699145522891,
+    "our_evm_percent": 38.858761189482,
+    "minimum_baseline_ber_percent": 1.411290322580645,
+    "our_ber_percent": 0.20161290322580644,
+    "methods": {
+      "initial_select64": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "codebook": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "coordinate": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.2699145522891
+      },
+      "spsa": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "done": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "de": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "mlp_feedback64": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "dnn_feedback64": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "cnn_feedback64": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "rescnn_feedback64": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "transformer_feedback64": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "complex_cnn_feedback64": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "jct_feedback64": {
+        "ber_percent": 1.411290322580645,
+        "evm_percent": 43.603268465388254
+      },
+      "cnn_warm64": {
+        "ber_percent": 0.20161290322580644,
+        "evm_percent": 38.858761189482
+      }
+    }
+  },
+  "selection_rule": {
+    "carrier_ghz": 12,
+    "measurement_budget": 64,
+    "eligibility": "our BER and EVM both strictly lower than every one of the thirteen baselines",
+    "strength": "relative EVM reduction versus the lowest baseline EVM in the same case",
+    "selection": "eligible case nearest median strength; break ties by test index",
+    "role": "outcome-conditioned illustrative improvement case; not an unbiased full-test estimate",
+    "fixed_inputs": "same environment, payload, antenna noise, eight APD noise seeds, equalizer and plot axes",
+    "if_empty": "stop; do not relax conditions or manufacture data",
+    "excluded": "no retraining, parameter tuning, independent per-method examples or changed noise"
+  },
+  "eligible_cases": 61,
+  "examined_cases": 864,
+  "raw_new_sha256": "b929a90d9d461f011d0b44c63023f3f44e487389d144f9a4a4c5ac587a4bbdd5",
+  "raw_old_sha256": "ea8976eb04f580c59db15a015019a485c6d62f7af0ef87780a7d32a10f9b0410",
+  "source_builder_sha256": "6fec730016b8fb78f0852106aa70477efee31d22d335e8bdcf9b07705d5e8224",
+  "source_analysis_complete_sha256": "029ae0dc3b21c5291d19b7c7e564a24186bebac393e70c23cf9badd08f9969a8",
+  "metrics_replayed_and_matched": true,
+  "input_noise_and_payload_paired": true,
+  "files": {
+    "rq1_constellation_all13_12_64.pdf": "bae5670cee347e70be80180116622691cd662cd455dc144eda3ce149034ebb17",
+    "rq1_constellation_all13_12_64.svg": "aaa0485f001ceb64d33e8e2dabba3abb67896106c5a156fc0d48a1c00d3a4451",
+    "rq1_constellation_all13_12_64.png": "db88b600c2850adf591f7beb201f0c3252fb6ee71dcf2f065346d9d3a7705dd8",
+    "reconstruction_case.npz": "82eda8ddf2a3fb2a3791aac86ec7b57ac01bb7fe1ba05a930758fe33ebf1af9a"
+  }
+}

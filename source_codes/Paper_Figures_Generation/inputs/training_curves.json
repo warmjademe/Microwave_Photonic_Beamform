@@ -1,0 +1,431 @@
+{
+  "sources": {
+    "dataset_simulation/diagnostics/20260926_training_scale_budget/curves.json": "57c6190254fd2e6a9e949f527533556038f8046ba85e50e8488c575f2e38ea46",
+    "dataset_simulation/baseline_results/20260925_full_baselines/evaluation_scaling_3456/summary.json": "1f257193605bd3d2826fa72007afb62cb5d549408bc220c64049713babb8b878"
+  },
+  "evaluation": "216 validation environments; 17 carriers; component A; B off",
+  "curves": [
+    {
+      "curve": "cnn_fixed40",
+      "rows": [
+        {
+          "ber": 0.1312883240213648,
+          "ber_ci95": [
+            0.11486818293625693,
+            0.14852765478951435
+          ],
+          "block_error_rate": 0.5921840958605664,
+          "block_error_rate_ci95": [
+            0.5476919934640523,
+            0.6373238357843137
+          ],
+          "curve": "cnn_fixed40",
+          "effective_snr_db": 3.6680003983554785,
+          "effective_snr_db_ci95": [
+            3.1729223979652232,
+            4.195524261878446
+          ],
+          "mean_nmse": 0.4297342417364177,
+          "mean_nmse_ci95": [
+            0.380581412654522,
+            0.48162360068618276
+          ],
+          "mean_optical_dc_w": 0.059780812476835726,
+          "mean_optical_dc_w_ci95": [
+            0.0593571629148513,
+            0.06020375558064199
+          ],
+          "method": "response_n0216_fixed_epochs",
+          "nominal_probes": 16,
+          "old_test_environments": 216,
+          "paired_output_snr_db": 25.416487538165814,
+          "paired_output_snr_db_ci95": [
+            24.27048273656269,
+            26.378709711209677
+          ],
+          "rms_evm_percent": 65.55411823344265,
+          "rms_evm_percent_ci95": [
+            61.69128079837139,
+            69.39910667128736
+          ],
+          "ser": 0.2132111357087638,
+          "ser_ci95": [
+            0.18759226865029166,
+            0.24006263067502986
+          ],
+          "training_environments": 216
+        },
+        {
+          "ber": 0.12922442722608757,
+          "ber_ci95": [
+            0.11302349624885796,
+            0.14616729588340713
+          ],
+          "block_error_rate": 0.5859545206971678,
+          "block_error_rate_ci95": [
+            0.5416317742374728,
+            0.6308900122549019
+          ],
+          "curve": "cnn_fixed40",
+          "effective_snr_db": 3.744685853988918,
+          "effective_snr_db_ci95": [
+            3.2514133221914543,
+            4.278164721253718
+          ],
+          "mean_nmse": 0.4222128186230884,
+          "mean_nmse_ci95": [
+            0.37340792260615485,
+            0.4729973067216501
+          ],
+          "mean_optical_dc_w": 0.059929587826194404,
+          "mean_optical_dc_w_ci95": [
+            0.05951073781445101,
+            0.06035154401400137
+          ],
+          "method": "response_n0432_fixed_epochs",
+          "nominal_probes": 16,
+          "old_test_environments": 216,
+          "paired_output_snr_db": 25.799202171445934,
+          "paired_output_snr_db_ci95": [
+            24.64857870515893,
+            26.76149808760821
+          ],
+          "rms_evm_percent": 64.97790536967842,
+          "rms_evm_percent_ci95": [
+            61.10711271924942,
+            68.7747996498586
+          ],
+          "ser": 0.20998269379436363,
+          "ser_ci95": [
+            0.184396001344086,
+            0.23644949355190104
+          ],
+          "training_environments": 432
+        },
+        {
+          "ber": 0.12687117857895847,
+          "ber_ci95": [
+            0.11067804417914119,
+            0.1437721131799494
+          ],
+          "block_error_rate": 0.5779547930283224,
+          "block_error_rate_ci95": [
+            0.5332235498366014,
+            0.623672385620915
+          ],
+          "curve": "cnn_fixed40",
+          "effective_snr_db": 3.821029200638957,
+          "effective_snr_db_ci95": [
+            3.3206916096314876,
+            4.359242458893053
+          ],
+          "mean_nmse": 0.4148557175615153,
+          "mean_nmse_ci95": [
+            0.3665014982344562,
+            0.4655119553336083
+          ],
+          "mean_optical_dc_w": 0.06006789086957145,
+          "mean_optical_dc_w_ci95": [
+            0.05965690284465285,
+            0.06048486019151052
+          ],
+          "method": "complex_response_cnn",
+          "nominal_probes": 16,
+          "old_test_environments": 216,
+          "paired_output_snr_db": 26.03167760705553,
+          "paired_output_snr_db_ci95": [
+            24.888179336590014,
+            26.989852765166393
+          ],
+          "rms_evm_percent": 64.40929417106783,
+          "rms_evm_percent_ci95": [
+            60.53936720300994,
+            68.22843654367468
+          ],
+          "ser": 0.20597129981024667,
+          "ser_ci95": [
+            0.1804804174133811,
+            0.23243798975683463
+          ],
+          "training_environments": 864
+        },
+        {
+          "ber": 0.12676795628645723,
+          "ber_ci95": [
+            0.11053393103433129,
+            0.14374092687030007
+          ],
+          "block_error_rate": 0.5765931372549019,
+          "block_error_rate_ci95": [
+            0.5317265795206971,
+            0.6220052083333333
+          ],
+          "curve": "cnn_fixed40",
+          "effective_snr_db": 3.823718171268695,
+          "effective_snr_db_ci95": [
+            3.316599665684175,
+            4.368903365387441
+          ],
+          "mean_nmse": 0.41459893567469225,
+          "mean_nmse_ci95": [
+            0.36568711946207744,
+            0.465950769665016
+          ],
+          "mean_optical_dc_w": 0.06003648803530903,
+          "mean_optical_dc_w_ci95": [
+            0.0596153086439378,
+            0.06045127975333249
+          ],
+          "method": "response_n1728_fixed_epochs",
+          "nominal_probes": 16,
+          "old_test_environments": 216,
+          "paired_output_snr_db": 26.193769939046852,
+          "paired_output_snr_db_ci95": [
+            25.039529790026137,
+            27.162848934278422
+          ],
+          "rms_evm_percent": 64.38935748046352,
+          "rms_evm_percent_ci95": [
+            60.47206953923857,
+            68.26058669964188
+          ],
+          "ser": 0.20557927472064094,
+          "ser_ci95": [
+            0.18015474558999228,
+            0.2320827787880385
+          ],
+          "training_environments": 1728
+        },
+        {
+          "ber": 0.12523115204863308,
+          "block_error_rate": 0.5763888888888888,
+          "effective_snr_db": 3.874666563201062,
+          "environments": 216,
+          "full_online_timing_pending": true,
+          "group": "all",
+          "mean_decoder_seconds": 0.03547995564708393,
+          "mean_feedback_calls": 16.0,
+          "mean_nmse": 0.4097635688841837,
+          "mean_optical_dc_w": 0.060011725954549046,
+          "method": "response_n3456_fixed_epochs__base_2sweeps",
+          "paired_output_snr_db": 26.293524170628643,
+          "rms_evm_percent": 64.0127775435642,
+          "ser": 0.2033962330451894,
+          "value": null,
+          "training_environments": 3456
+        }
+      ]
+    },
+    {
+      "curve": "cnn_equal_updates",
+      "rows": [
+        {
+          "ber": 0.13004855840185536,
+          "ber_ci95": [
+            0.11387720774913908,
+            0.14695502472942581
+          ],
+          "block_error_rate": 0.5864311002178649,
+          "block_error_rate_ci95": [
+            0.5423109000544662,
+            0.6313665917755991
+          ],
+          "curve": "cnn_equal_updates",
+          "effective_snr_db": 3.7485176711703767,
+          "effective_snr_db_ci95": [
+            3.2579103759965107,
+            4.277728474384296
+          ],
+          "mean_nmse": 0.4218404609506228,
+          "mean_nmse_ci95": [
+            0.37344543296836274,
+            0.47229023111417096
+          ],
+          "mean_optical_dc_w": 0.059811508772399324,
+          "mean_optical_dc_w_ci95": [
+            0.05938946590260745,
+            0.06023964573932499
+          ],
+          "method": "response_n0216_equal_updates",
+          "nominal_probes": 16,
+          "old_test_environments": 216,
+          "paired_output_snr_db": 25.885416650371205,
+          "paired_output_snr_db_ci95": [
+            24.75889881991093,
+            26.832218252555624
+          ],
+          "rms_evm_percent": 64.94924641215037,
+          "rms_evm_percent_ci95": [
+            61.11018188002474,
+            68.72337527772638
+          ],
+          "ser": 0.21106213542764776,
+          "ser_ci95": [
+            0.18558157526003233,
+            0.23749483888537495
+          ],
+          "training_environments": 216
+        },
+        {
+          "ber": 0.12814992708552955,
+          "ber_ci95": [
+            0.11195488472046525,
+            0.1452036910754445
+          ],
+          "block_error_rate": 0.5812908496732027,
+          "block_error_rate_ci95": [
+            0.536832788671024,
+            0.626395697167756
+          ],
+          "curve": "cnn_equal_updates",
+          "effective_snr_db": 3.785458539354332,
+          "effective_snr_db_ci95": [
+            3.2884987463464515,
+            4.31736989516061
+          ],
+          "mean_nmse": 0.4182675245522612,
+          "mean_nmse_ci95": [
+            0.37005221707070635,
+            0.46897546790131767
+          ],
+          "mean_optical_dc_w": 0.06002443957068885,
+          "mean_optical_dc_w_ci95": [
+            0.05962476716059383,
+            0.060427130066316545
+          ],
+          "method": "response_n0432_equal_updates",
+          "nominal_probes": 16,
+          "old_test_environments": 216,
+          "paired_output_snr_db": 26.216081871435435,
+          "paired_output_snr_db_ci95": [
+            25.0740114605661,
+            27.174421484671374
+          ],
+          "rms_evm_percent": 64.67360547798934,
+          "rms_evm_percent_ci95": [
+            60.83191736725479,
+            68.48178355574133
+          ],
+          "ser": 0.20820595263194883,
+          "ser_ci95": [
+            0.18263092759505237,
+            0.23476491122882845
+          ],
+          "training_environments": 432
+        },
+        {
+          "ber": 0.12687117857895847,
+          "ber_ci95": [
+            0.11067804417914119,
+            0.1437721131799494
+          ],
+          "block_error_rate": 0.5779547930283224,
+          "block_error_rate_ci95": [
+            0.5332235498366014,
+            0.623672385620915
+          ],
+          "curve": "cnn_equal_updates",
+          "effective_snr_db": 3.821029200638957,
+          "effective_snr_db_ci95": [
+            3.3206916096314876,
+            4.359242458893053
+          ],
+          "mean_nmse": 0.4148557175615153,
+          "mean_nmse_ci95": [
+            0.3665014982344562,
+            0.4655119553336083
+          ],
+          "mean_optical_dc_w": 0.06006789086957145,
+          "mean_optical_dc_w_ci95": [
+            0.05965690284465285,
+            0.06048486019151052
+          ],
+          "method": "complex_response_cnn",
+          "nominal_probes": 16,
+          "old_test_environments": 216,
+          "paired_output_snr_db": 26.03167760705553,
+          "paired_output_snr_db_ci95": [
+            24.888179336590014,
+            26.989852765166393
+          ],
+          "rms_evm_percent": 64.40929417106783,
+          "rms_evm_percent_ci95": [
+            60.53936720300994,
+            68.22843654367468
+          ],
+          "ser": 0.20597129981024667,
+          "ser_ci95": [
+            0.1804804174133811,
+            0.23243798975683463
+          ],
+          "training_environments": 864
+        },
+        {
+          "ber": 0.12814827992128752,
+          "ber_ci95": [
+            0.11196480888502355,
+            0.1451837741144845
+          ],
+          "block_error_rate": 0.579520697167756,
+          "block_error_rate_ci95": [
+            0.5348226443355121,
+            0.6249327682461874
+          ],
+          "curve": "cnn_equal_updates",
+          "effective_snr_db": 3.7687356104863268,
+          "effective_snr_db_ci95": [
+            3.2651060315926212,
+            4.307883688384953
+          ],
+          "mean_nmse": 0.4198812089203947,
+          "mean_nmse_ci95": [
+            0.3708613981200902,
+            0.47150835950858255
+          ],
+          "mean_optical_dc_w": 0.060032040668467235,
+          "mean_optical_dc_w_ci95": [
+            0.05960587575554391,
+            0.060452671920522255
+          ],
+          "method": "response_n1728_equal_updates",
+          "nominal_probes": 16,
+          "old_test_environments": 216,
+          "paired_output_snr_db": 26.168956903355962,
+          "paired_output_snr_db_ci95": [
+            25.037479662188353,
+            27.130221738906563
+          ],
+          "rms_evm_percent": 64.79824140517971,
+          "rms_evm_percent_ci95": [
+            60.89839062635316,
+            68.66646630563054
+          ],
+          "ser": 0.20793471958675944,
+          "ser_ci95": [
+            0.18236576160482112,
+            0.23453447295136692
+          ],
+          "training_environments": 1728
+        },
+        {
+          "ber": 0.1281049045962471,
+          "block_error_rate": 0.5797930283224401,
+          "effective_snr_db": 3.786722987150811,
+          "environments": 216,
+          "full_online_timing_pending": true,
+          "group": "all",
+          "mean_decoder_seconds": 0.03589145243860282,
+          "mean_feedback_calls": 16.0,
+          "mean_nmse": 0.418145763745259,
+          "mean_optical_dc_w": 0.059862462639684914,
+          "method": "response_n3456_equal_updates__base_2sweeps",
+          "paired_output_snr_db": 26.037768019343325,
+          "rms_evm_percent": 64.66419130749715,
+          "ser": 0.20805551163117578,
+          "value": null,
+          "training_environments": 3456
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@ __pycache__/
 .venv*/
 .downloads/
 *.npz
+!source_codes/Paper_Figures_Generation/inputs/*.npz
 *.npy
 *.pt
 *.so

@@ -1,0 +1,15 @@
+{
+  "at": "2026-09-27T04:13:55.845356+00:00",
+  "comparisons": 65,
+  "evaluation_complete_sha256": "68a4e84816c8e3095635797a5e20ab51c27b36525196132b3a2b4da2c570c86b",
+  "file_sha256": {
+    "audit.json": "60706f963c72acdb2ef49c392a8daee46d4f351306a25a30426f058e88ea45b1",
+    "budget_comparisons.json": "aa6813b69c884c262118beb9882e0b4675d8d04ed5147583fba781eb2809059b",
+    "comparisons.json": "4de7729c1e37fedf41c491a7128fdb12568e4959b5593d22acd592c6add8c464",
+    "environment_metrics.npz": "44f83ff05a7811a4c33253518fad4eb0447e5f3ca2f6a831f30efefda9a85577",
+    "groups.json": "67a571c368bf6537fffff0b8c780ed16c3f73290fbccd4cb2d0a5a89b60a357c",
+    "summary.json": "368c91ae0777ff522ab022023ff3a17b7387d82dc9a42f66ed8af2458c259016"
+  },
+  "methods": 14,
+  "status": "complete"
+}

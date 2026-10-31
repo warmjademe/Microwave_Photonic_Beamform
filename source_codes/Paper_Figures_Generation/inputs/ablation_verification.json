@@ -1,0 +1,22 @@
+{
+  "RQ1_primary_reproduced": true,
+  "at": "2026-10-29T14:21:13.890857+00:00",
+  "conditions": 14688,
+  "files_sha256": {
+    "REPORT_zh.md": "2745ad9c290a50a4df7c7e8cee7a918f61ebf1b37c688c9d6bda4dcd62683345",
+    "comparisons.json": "11dc1843786a34d0daa6258fb797a63647cc372c80202e98b632085f481590ab",
+    "complete.json": "7fde8fe275eff026c689f88c3a4a1c0cb93f69ba89e2b76ab6e807bc3aad5f2e",
+    "environment_metrics.npz": "d4ec950c44d105736f40a3f68b0d89639c818823133a927b62b5eaa29539dcf7",
+    "protocol.json": "b01d2a15aa76356924c9073411f5ce3bf5c65934207bb2ca0c106b05a07c2458",
+    "records.json": "3903ee93efcd3c3dbc8bc38d7875e64c306ceeac019454adf0737b2bd00a13d9",
+    "rq2_af_ablation.pdf": "967daf4a0f2557751db891547933711b53d71dcadbd6dc0066a8cdd837145f38",
+    "rq2_af_ablation.png": "bd81d77115fffe4b9c8dd9058a3f8691c7a26cd73e5baedabf538580bb358cbb",
+    "selection_diagnostics.json": "8d8fb95dee57fa12fdb11d2b3c5fb38f58596992f8fe39d828566b477e3d8aed",
+    "summary.json": "2d6cb6d1483a937dc94ac232750ac544a7a34b5fa5a957eb954f089c35ac7fec"
+  },
+  "manuscript_changed": false,
+  "method_outputs": 73440,
+  "old_joint_correction_used": false,
+  "report_code_sha256": "22788d62c131bc254da1124dbf7b4cef0937e80ed711be9d97d672abf7bb793f",
+  "status": "passed"
+}

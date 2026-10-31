@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "checks": "passed",
+  "paired_conditions": 483021,
+  "outputs": {
+    "array_response.npz": "652a75e85c5a0b69ddb9d97439153561441c88557c1903b6b7e341326b1bb381",
+    "array_ttd_phase.pdf": "45d556894bb8257e07e043c691ab2a9d32c1d05eaf485eaab205cd6f78a04f8b",
+    "array_ttd_phase.png": "76dfd0430d142cf1ca05d6f03bf0b6dcc101208254b242892bc91413cc5d0f79",
+    "summary.json": "49db1526b2367cdd5c6e37a6c1c6a9397f0dd862c84c8b0b53c8532f5656a891"
+  },
+  "source_sha256": {
+    "source_codes/revision_scope_20261030/array_diagnostic.py": "e05665857e9d886be8cdb0d750fec5929675f79e943b47e0902075e7f7809d8a",
+    "source_codes/revision_scope_20261030/protocol.json": "14d9aa2b5a47db16de52296bc93228616559aaa3ff170991096d84f4ab503026",
+    "source_codes/native_sim/config.py": "2019d59fb778fc7bf18fe8170deb93738fa77531b1ba3a39722432906d8bc384",
+    "source_codes/baseline_common/controls.py": "e724edf047a2f88e39863903bc50b29e39ac48df7b336551d9c1387f5cc8de6e"
+  },
+  "no_receiver_or_training_run": true
+}

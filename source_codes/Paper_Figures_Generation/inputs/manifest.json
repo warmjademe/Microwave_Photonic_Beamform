@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "files": {
+    "rq1_metrics.npz": {
+      "source": "dataset_simulation/baseline_results/20260927_uniform64_all13/analysis/environment_metrics.npz",
+      "sha256": "44f83ff05a7811a4c33253518fad4eb0447e5f3ca2f6a831f30efefda9a85577",
+      "bytes": 4954266,
+      "transformation": "byte-identical copy"
+    },
+    "rq1_groups.json": {
+      "source": "dataset_simulation/baseline_results/20260927_uniform64_all13/analysis/groups.json",
+      "sha256": "67a571c368bf6537fffff0b8c780ed16c3f73290fbccd4cb2d0a5a89b60a357c",
+      "bytes": 214744,
+      "transformation": "byte-identical copy"
+    },
+    "rq1_summary.json": {
+      "source": "dataset_simulation/baseline_results/20260927_uniform64_all13/analysis/summary.json",
+      "sha256": "368c91ae0777ff522ab022023ff3a17b7387d82dc9a42f66ed8af2458c259016",
+      "bytes": 5821,
+      "transformation": "byte-identical copy"
+    },
+    "rq1_complete.json": {
+      "source": "dataset_simulation/baseline_results/20260927_uniform64_all13/analysis/complete.json",
+      "sha256": "029ae0dc3b21c5291d19b7c7e564a24186bebac393e70c23cf9badd08f9969a8",
+      "bytes": 783,
+      "transformation": "byte-identical copy"
+    },
+    "selection_origins.json": {
+      "source": "dataset_simulation/diagnostics/20260927_uniform64_all13_figures/selection_origins.json",
+      "sha256": "b78f5d0646eaccf16f29be67a672e82fa775ae8bfcce36e2ed3a4aef4def224b",
+      "bytes": 1154,
+      "transformation": "byte-identical copy"
+    },
+    "selection_manifest.json": {
+      "source": "dataset_simulation/diagnostics/20260927_uniform64_all13_figures/manifest.json",
+      "sha256": "c7ed22b879a2b571e7a7a218860e6b3f919bd91188f01d571ea6429a54bf9286",
+      "bytes": 35699,
+      "transformation": "byte-identical copy"
+    },
+    "constellation.npz": {
+      "source": "dataset_simulation/diagnostics/20260927_constellation_reconstruction/reconstruction_case.npz",
+      "sha256": "82eda8ddf2a3fb2a3791aac86ec7b57ac01bb7fe1ba05a930758fe33ebf1af9a",
+      "bytes": 13381,
+      "transformation": "byte-identical copy"
+    },
+    "constellation_manifest.json": {
+      "source": "dataset_simulation/diagnostics/20260927_constellation_reconstruction/manifest.json",
+      "sha256": "9c642a8308fb274acf4314361230de92284c65117b3dbfc8f86d00d987d15cf5",
+      "bytes": 6894,
+      "transformation": "byte-identical copy"
+    },
+    "ablation_summary.json": {
+      "source": "dataset_simulation/revision_rq2_af_20261029/full/summary.json",
+      "sha256": "2d6cb6d1483a937dc94ac232750ac544a7a34b5fa5a957eb954f089c35ac7fec",
+      "bytes": 5172,
+      "transformation": "byte-identical copy"
+    },
+    "ablation_comparisons.json": {
+      "source": "dataset_simulation/revision_rq2_af_20261029/full/comparisons.json",
+      "sha256": "11dc1843786a34d0daa6258fb797a63647cc372c80202e98b632085f481590ab",
+      "bytes": 24532,
+      "transformation": "byte-identical copy"
+    },
+    "ablation_verification.json": {
+      "source": "dataset_simulation/revision_rq2_af_20261029/full/verification.json",
+      "sha256": "e5f6d5b8d296221e4402fabd97ce6dd965bdaa619f71555578890a865054ce36",
+      "bytes": 1263,
+      "transformation": "byte-identical copy"
+    },
+    "sensitivity_summary.json": {
+      "source": "dataset_simulation/revision_af_20261029/R/analysis/summary.json",
+      "sha256": "a4b3abd68e0906212cb566e7fc58235da83ad7f8eec3d490eda73f203af7d454",
+      "bytes": 28164,
+      "transformation": "byte-identical copy"
+    },
+    "sensitivity_comparisons.json": {
+      "source": "dataset_simulation/revision_af_20261029/R/analysis/comparisons.json",
+      "sha256": "ea871075ed6ba05321636e1d3537ed0c6d49415c4337cbecf741f82166eb3617",
+      "bytes": 216026,
+      "transformation": "byte-identical copy"
+    },
+    "sensitivity_complete.json": {
+      "source": "dataset_simulation/revision_af_20261029/R/analysis/complete.json",
+      "sha256": "fa3e1089391178019b0cf40cd806a8c11a25b275e2e24ff8321139468abb2f5b",
+      "bytes": 578,
+      "transformation": "byte-identical copy"
+    },
+    "training_curves.json": {
+      "source": "dataset_simulation/diagnostics/20260927_paper_rq3_figures_02/manifest.json",
+      "sha256": "2bb612769f2e35257893054e5962f8196b6e618fdc496b27534c2af0dd40149d",
+      "bytes": 13755,
+      "transformation": "byte-identical copy"
+    },
+    "array_response.npz": {
+      "source": "dataset_simulation/revision_scope_20261030/array/array_response.npz",
+      "sha256": "652a75e85c5a0b69ddb9d97439153561441c88557c1903b6b7e341326b1bb381",
+      "bytes": 4165847,
+      "transformation": "byte-identical copy"
+    },
+    "array_summary.json": {
+      "source": "dataset_simulation/revision_scope_20261030/array/summary.json",
+      "sha256": "49db1526b2367cdd5c6e37a6c1c6a9397f0dd862c84c8b0b53c8532f5656a891",
+      "bytes": 9268,
+      "transformation": "byte-identical copy"
+    },
+    "array_complete.json": {
+      "source": "dataset_simulation/revision_scope_20261030/array/complete.json",
+      "sha256": "18f306482ef8c41a94e1ab420166efe4973b74470acc972b18efe0a4cb694b08",
+      "bytes": 1018,
+      "transformation": "byte-identical copy"
+    },
+    "array_geometry.json": {
+      "source": "source_codes/native_sim/config.py",
+      "source_sha256": "2019d59fb778fc7bf18fe8170deb93738fa77531b1ba3a39722432906d8bc384",
+      "sha256": "593a907c9a4995860c180f8445ae5714db6758d6e7d078bdbb0bbee46be2ca95",
+      "transformation": "AST extraction of four frozen array constants"
+    }
+  },
+  "checked_source_bindings": [
+    "baseline_results/20260927_uniform64_all13/analysis/environment_metrics.npz",
+    "baseline_results/20260927_uniform64_all13/analysis/summary.json",
+    "baseline_results/20260927_uniform64_all13/analysis/groups.json",
+    "revision_rq2_af_20261029/full/summary.json",
+    "revision_rq2_af_20261029/full/comparisons.json",
+    "revision_af_20261029/R/analysis/summary.json",
+    "revision_af_20261029/R/analysis/comparisons.json",
+    "revision_scope_20261030/array/array_response.npz",
+    "revision_scope_20261030/array/summary.json"
+  ],
+  "scope": "Plotting inputs only; no training, inference, receiver replay or new case selection.",
+  "manuscripts": {
+    "main.tex": "6d5d91bb841536869a885de0861c19a688c83595d3c22440cac0bd8d5c992560",
+    "main_zh.tex": "ebfbcc1ce8150b37b82d3bf3b5efaea79b72553f6327754973883547c2cfaff5"
+  }
+}
